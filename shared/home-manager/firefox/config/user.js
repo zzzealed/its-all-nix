@@ -126,7 +126,7 @@ user_pref("network.predictor.enabled", false);
 /* 3. Arkenfox version: 133 */
 /*** [SECTION 0100]: STARTUP ***/
 user_pref("browser.startup.page", 1);
-user_pref("browser.startup.homepage", "about:home");
+user_pref("browser.startup.homepage", "https://glance.l.zzzealed.com");
 user_pref("browser.newtabpage.enabled", true);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false); // [FF58+]
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // [FF83+] Shortcuts>Sponsored shortcuts
