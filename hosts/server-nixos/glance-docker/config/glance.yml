@@ -1,0 +1,174 @@
+theme:
+  background-color: 220 15 15
+  primary-color: 120 100 50
+  contrast-multiplier: 1.1
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: calendar
+
+          - type: monitor
+            cache: 1m
+            title: Selfhosted
+            sites:
+              - title: Vaultwarden
+                url: https://vault.l.zzzealed.com
+                icon: https://raw.githubusercontent.com/dani-garcia/vaultwarden/ef4bff09eb4414117cd8ea25c809988872e2016b/resources/vaultwarden-icon-white.svg
+              - title: Dashdot
+                url: https://dashdot.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dashdot.png
+                            
+          - type: twitch-channels
+            title: Twitch
+            channels:
+              - RetalsRL
+              - atowwwww
+              - Vatira_
+              - dralii
+              - itachi_rl
+              - RocketLeague
+              - RLEsports
+              - ow_esports
+              - oilrats
+
+      - size: full
+        widgets:
+          - type: html
+            source: |
+             <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+              <p>CPU</p> 
+              <iframe
+                src="https://dashdot.l.zzzealed.com?graph=cpu&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
+                style="border-radius: 0px"
+                allowtransparency="true"
+                frameborder="0"
+                width="255"
+                height="125"
+              ></iframe>
+             
+               <p>RAM</p>
+               <iframe
+                src="https://dashdot.l.zzzealed.com?graph=ram&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
+                style="border-radius: 0px"
+                allowtransparency="true"
+                frameborder="0"
+                width="255"
+                height="125"
+              ></iframe>
+             
+              <p>STORAGE</p>
+              <iframe
+                src="https://dashdot.l.zzzealed.com?graph=storage&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
+                style="border-radius: 0px"
+                allowtransparency="true"
+                frameborder="0"
+                width="255"
+                height="125"
+              ></iframe>
+             </div>
+
+          - type: rss
+            title: News
+            style: horizontal-cards
+            feeds:
+              - url: https://www.theguardian.com/us/rss
+              - title: The Guardian news
+
+          - type: rss
+            title: Culture
+            style: horizontal-cards
+            feeds:
+              - url: https://www.wired.com/feed/category/culture/latest/rss
+              - title: WIRED culture
+
+              - url: https://www.theverge.com/entertainment/rss/index.xml
+              - title: The Verge entertainment
+
+              - url: https://arstechnica.com/gaming/rss
+              - title: Ars Technica gaming
+
+              - url: https://mashable.com/feeds/rss/entertainment
+              - title: Mashable entertainment
+
+              - url: https://www.polygon.com/rss/index.xml
+              - title: Polgyon gaming
+
+          - type: rss
+            title: Linux & Selfhosted
+            style: horizontal-cards
+            feeds:
+              - url: https://itsfoss.com/rss
+              - title: It's FOSS
+
+              - url: https://noted.lol/rss/
+              - title: noted.lol
+
+              - url: https://selfh.st/rss/
+              - title: selfh.st
+
+          - type: rss
+            title: Tech
+            style: horizontal-cards
+            feeds:
+              - url: https://www.theverge.com/tech/rss/index.xml
+              - title: The Verge tech
+
+              - url: https://arstechnica.com/gadgets/rss
+              - title: Ars Techinca tech
+
+              - url: https://mashable.com/feeds/rss/tech
+              - title: Mashable tech
+
+              
+          - type: videos
+            title: YouTube
+            channels:
+              - UCRLM6B6rGXDSJawUH_mHHPw # Retals
+              - UC5UAwBUum7CPN5buc-_N1Fw # The Linux Experiment
+              - UClCNSSL0q1TafS8kaYEAwew # NFR Podcast
+              - UCE_BYUUN0I04cAmk1c40sTg # Tesla
+              - UCj-wTLj0p0YvTkS-9-ACm0A # Blooprint
+              - UCiflacceDTPX3_SJG3Uiqkg # Motion
+              - UCtQ3NfmlxDDWyhfxxgOsJhA # Frost
+              - UCj25EgqxLL4HlUYkug7duig # Stevie
+              - UC1DTYW241WD64ah5BFWn4JA # Sam O'Nella
+              - UCTSRIY3GLFYIpkR2QwyeklA # Drew Gooden
+              - UCFQMnBA3CS502aghlcr0_aw # CoffeeZilla
+              - UCVWhVAZwCdQsPZL-mDLcxPQ # Whitelight
+              - UC7Ucs42FZy3uYzjrqzOIHsw # EmpLemon
+              - UCYGDiVemmhY_Q1M-hKp4fvw # bigboss
+              - UCRbOPaGDB_xOQkVM8Rnn62Q # IHE
+              - UC2C_jShtL725hvbm1arSV9w # CGP Grey
+              - UC3cpN6gcJQqcCM6mxRUo_dA # Wendigoon
+              - UCpFFItkfZz1qz5PpHpqzYBw # Nexpo
+
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+          
+          - type: weather
+            location: Aarhus, Denmark
+            
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: AAPL
+                name: Apple
+              - symbol: MSFT
+                name: Microsoft
+              - symbol: GOOGL
+                name: Google
+              - symbol: AMD
+                name: AMD
+              - symbol: RDDT
+                name: Reddit
+

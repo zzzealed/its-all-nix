@@ -1,0 +1,23 @@
+theme = "doom_acario_dark"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "read-only-indicator", "spacer", "spacer", "spacer", "separator", "version-control"]
+center = ["file-name", "file-modification-indicator"]
+right = ["spinner", "position"]
+separator = "\ue725 "
+
+[editor.gutters]
+layout = ["line-numbers", "spacer", "diff"]

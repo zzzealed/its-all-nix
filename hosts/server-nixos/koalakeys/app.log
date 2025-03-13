@@ -1,0 +1,31 @@
+2025-01-13 04:15:33,010 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/docker.yaml
+2025-01-13 04:15:33,049 - app - INFO - Cheatsheet generated: ../html/docker_cheatsheet.html
+2025-01-13 04:15:33,055 - app - INFO - Index page generated: ../html/index.html
+2025-01-13 04:17:24,553 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/docker.yaml
+2025-01-13 04:17:24,593 - app - INFO - Cheatsheet generated: ../html/docker_cheatsheet.html
+2025-01-13 04:17:24,598 - app - INFO - Index page generated: ../html/index.html
+2025-01-13 04:19:26,808 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/docker.yaml
+2025-01-13 04:19:26,848 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 04:19:26,854 - app - INFO - Index page generated: html/index.html
+2025-01-13 13:44:48,085 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/vimium.yaml
+2025-01-13 13:44:48,124 - app - INFO - Cheatsheet generated: html/vimium_cheatsheet.html
+2025-01-13 13:44:48,126 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/mpv.yaml
+2025-01-13 13:44:48,161 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:44:48,162 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/helix.yaml
+2025-01-13 13:44:48,197 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:44:48,198 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/docker.yaml
+2025-01-13 13:44:48,234 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:44:48,235 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/nix.yaml
+2025-01-13 13:44:48,270 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:44:48,275 - app - INFO - Index page generated: html/index.html
+2025-01-13 13:45:42,193 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/vimium.yaml
+2025-01-13 13:45:42,232 - app - INFO - Cheatsheet generated: html/vimium_cheatsheet.html
+2025-01-13 13:45:42,233 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/mpv.yaml
+2025-01-13 13:45:42,268 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:45:42,269 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/helix.yaml
+2025-01-13 13:45:42,303 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:45:42,305 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/docker.yaml
+2025-01-13 13:45:42,340 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:45:42,341 - app - INFO - YAML validation successful: /home/mads/its-all-nix/hosts/server-nixos/koalakeys/KoalaKeys/cheatsheets/nix.yaml
+2025-01-13 13:45:42,375 - app - INFO - Cheatsheet generated: html/docker_cheatsheet.html
+2025-01-13 13:45:42,381 - app - INFO - Index page generated: html/index.html

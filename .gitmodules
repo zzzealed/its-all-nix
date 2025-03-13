@@ -1,0 +1,3 @@
+[submodule "hosts/server-nixos/koalakeys/KoalaKeys"]
+	path = hosts/server-nixos/koalakeys/KoalaKeys
+	url = https://github.com/rtuszik/KoalaKeys

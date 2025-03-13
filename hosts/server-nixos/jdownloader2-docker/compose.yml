@@ -1,0 +1,10 @@
+services:
+  jdownloader2:
+    image: jlesage/jdownloader-2
+    ports:
+      - "5800:5800"
+    volumes:
+      - "./data:/config:rw"
+      - "/home/mads/Downloads:/Downloads:rw"
+      - "/vault:/vault:rw"
+

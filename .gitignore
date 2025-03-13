@@ -1,0 +1,11 @@
+result
+*.env
+
+# Windows bullshit kms kms kms x8
+shared/home-manager/mpv/config/host.conf*
+
+# Docker
+/hosts/server-nixos/*/data/*
+
+# Wireguard
+/hosts/server-nixos/wgquick/wg0.conf

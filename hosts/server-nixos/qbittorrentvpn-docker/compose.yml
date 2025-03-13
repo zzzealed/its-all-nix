@@ -1,0 +1,31 @@
+services:
+  qbittorrentvpn:
+    image: binhex/arch-qbittorrentvpn
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    privileged: true
+    ports:
+      - "8090:8090"
+      - "51820:51820"
+      - "51820:51820/udp"
+    volumes:
+      - ./data:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /vault:/vault:rw
+    environment:
+      - VPN_ENABLED=yes
+      - VPN_USER=wraaath@proton.me+pmp
+      - VPN_PROV=protonvpn
+      - VPN_CLIENT=wireguard
+      - ENABLE_STARTUP_SCRIPTS=no
+      - ENABLE_PRIVOXY=no
+      - STRICT_PORT_FORWARD=yes
+      - USERSPACE_WIREGUARD=yes
+      - LAN_NETWORK=192.168.0.0/24
+      - NAME_SERVERS=1.1.1.1,1.0.0.1
+      - DEBUG=false
+      - WEBUI_PORT=8090
+      - UMASK=000
+      - PUID=1000
+      - PGID=1000
+    restart: unless-stopped

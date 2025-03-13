@@ -1,0 +1,15 @@
+services:
+  glance:
+    image: glanceapp/glance:v0.6.4
+    volumes:
+      - ./config/glance.yml:/app/glance.yml
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8020:8080
+    restart: unless-stopped
+    networks:
+      - frontend
+networks:
+  frontend:
+    external: true
