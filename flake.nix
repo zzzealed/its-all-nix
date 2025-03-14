@@ -95,6 +95,15 @@
           ./shared/nix/cachix.nix
         ];
       };
+
+      pi-nixos = mkNixosSystem {
+        name = "pi-nixos";
+        system = "aarch64-linux";
+        modules = [
+          ./shared/nix/common-nixos-options.nix
+          ./shared/nix/mads-user.nix
+        ];
+      };
     };
   }; 
 }
