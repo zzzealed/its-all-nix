@@ -6,6 +6,12 @@
     ./docker
     ./smb-shares
   ];
+
+    # Bootloader
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/mmcblk0";
+    boot.loader.grub.useOSProber = true;
+
   
     networking.firewall = {
       enable = true;
@@ -24,5 +30,4 @@
     # Same ordeal for Home Manager.
     # We do it like this since the starting HM version is unique per-host.
     home-manager.users.mads.home.stateVersion = "24.05";
-  };
 }
