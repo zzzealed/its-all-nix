@@ -3,7 +3,6 @@ services:
     container_name: cloudflare-ddns
     hostname: cloudflare-ddns.local
     image: docker.io/timothyjmiller/cloudflare-ddns:latest
-    env_file: .env
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
@@ -12,5 +11,5 @@ services:
         PUID: 1000
         PGID: 1000
     volumes:
-      - ./config/config.json:/config.json:ro
+      - ./data/config.json:/config.json:ro
     network_mode: "host"

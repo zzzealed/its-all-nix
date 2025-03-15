@@ -12,6 +12,9 @@
     boot.loader.grub.device = "/dev/mmcblk0";
     boot.loader.grub.useOSProber = true;
 
+    environment.systemPackages = with pkgs; [
+      zfs
+    ];
   
     networking.firewall = {
       enable = true;
