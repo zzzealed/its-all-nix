@@ -1,5 +1,10 @@
 {
   config = {
+
+    nix.settings.trusted-users = [
+      "mads"
+    ];
+    
     # User(s)
     users.users.mads = {
       description = "Main user account";
