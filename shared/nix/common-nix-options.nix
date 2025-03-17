@@ -34,8 +34,6 @@
       settings.PasswordAuthentication = true;
     };
 
-    # VSCode Remote
-    programs.nix-ld.enable = true;
 
     # Shared packages between hosts. The very essentials.
     environment.systemPackages = with pkgs; [

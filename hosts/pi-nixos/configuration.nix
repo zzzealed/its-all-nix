@@ -8,12 +8,20 @@
   ];
 
     # Bootloader
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/mmcblk0";
-    boot.loader.grub.useOSProber = true;
+    boot.loader.grub.enable = false;
+    boot.loader.generic-extlinux-compatible.enable = true;
+    #boot.loader.grub.device = "/dev/mmcblk0";
+    #boot.loader.grub.useOSProber = true;
+
+    hardware.enableRedistributableFirmware = true;
+
+    boot.supportedFilesystems = [ "zfs" ];
+    boot.zfs.forceImportRoot = false;
+    networking.hostId = "cf20a29f";    
 
     environment.systemPackages = with pkgs; [
       zfs
+      samba
     ];
   
     networking.firewall = {
@@ -21,6 +29,9 @@
       allowedTCPPorts = [ 80 443 11001 8020 3001 ];
       allowedUDPPorts = [];
     };
+
+  
+    security.rtkit.enable = true;
 
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions

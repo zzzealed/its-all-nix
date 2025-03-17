@@ -47,6 +47,9 @@
         (./hosts + "/${name}/configuration.nix")
         ./shared/nix/common-nix-options.nix
         ./shared/nix/common-hm-options.nix
+        {
+          networking.hostName = name;
+        }
       ] ++ modules;
     };
   in {

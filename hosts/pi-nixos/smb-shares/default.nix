@@ -17,7 +17,6 @@
         "hosts deny" = "0.0.0.0/0";
         "guest account" = "nobody";
         "map to guest" = "bad user";
-        "ntlm auth" = "no"; # Disable credential caching?
       };
       "root" = {
         "path" = "/";
@@ -30,7 +29,7 @@
         #"force group" = "samba";
       };
       "vault2" = {
-        "path" = "/mnt/vault2";
+        "path" = "/vault2";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";

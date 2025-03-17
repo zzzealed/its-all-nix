@@ -20,6 +20,8 @@
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
 
+    boot.zfs.extraPools = [ "vault" ];
+
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit
       cudaPackages.cudatoolkit
