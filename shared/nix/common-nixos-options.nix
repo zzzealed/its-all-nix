@@ -3,7 +3,7 @@
   config = {
     # Networking
     networking.networkmanager.enable = true;
-    networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # Locale
     time.timeZone = "Europe/Copenhagen";
     i18n.defaultLocale = "en_DK.UTF-8";
