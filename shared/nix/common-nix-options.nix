@@ -42,8 +42,6 @@
       gitMinimal
       fastfetch
       wget
-      zellij
-      yazi
     ];
   };
 }
