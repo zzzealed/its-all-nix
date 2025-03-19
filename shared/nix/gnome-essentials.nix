@@ -1,15 +1,11 @@
 { pkgs, ... }:
-
 {
   config = {
     # Enable the GNOME Desktop Environment.
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
-
-    # Goodbye xterm
     services.xserver.excludePackages = [ pkgs.xterm ];
-
-    environment.gnome.excludePackages = (with pkgs; [
+    environment.gnome.excludePackages = (with pkgs; [ # Exclude most default GNOME packages
       #snapshot
       #baobab
       gnome-text-editor
