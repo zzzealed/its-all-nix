@@ -7,7 +7,7 @@
     ./smb-shares
     ./ollama
     #./qbittorrent-nox
-    #./wgquick
+    ./wgquick
   ];
 
    config = {
