@@ -20,7 +20,7 @@
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
 
-    boot.zfs.extraPools = [ "vault" ];
+    boot.zfs.extraPools = [ "vault" "vault2" ];
 
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit
@@ -30,6 +30,7 @@
       cachix
       streamrip
       protonvpn-cli
+      rsync
     ];
 
     boot.binfmt.emulatedSystems = [
@@ -39,6 +40,8 @@
     hardware.graphics.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia-container-toolkit.enable = true;
+    boot.kernelModules = [ "nvidia" ];
+    boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
     hardware.nvidia = {
 
       # Modesetting is required.
@@ -78,9 +81,7 @@
     };
 
     users.groups = {
-        vault = {
-            gid = 1001;
-        };
+        vault = { gid = 1001; };
     };
 
     # This value determines the NixOS release from which the default
