@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./docker
     ./smb-shares
-    #./ollama
+    ./ollama
     #./qbittorrent-nox
     #./wgquick
   ];
