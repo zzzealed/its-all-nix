@@ -1,9 +1,0 @@
-services:
-  koalakeys:
-    image: httpd:latest
-    container_name: koalakeys
-    ports:
-      - "8282:80" # Map host port 80 to container port 80
-    volumes:
-      - ./html:/usr/local/apache2/htdocs/ # Mount the HTML content directory
-    restart: unless-stopped

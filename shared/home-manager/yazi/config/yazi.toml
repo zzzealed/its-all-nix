@@ -1,0 +1,12 @@
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = "mpv %*", orphan = true, for = "windows" }
+]
+edit = [
+	{ run = 'hx "$@"', block = true, for = "unix" },
+	{ run = "hx %*",  block = true, for = "windows" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]

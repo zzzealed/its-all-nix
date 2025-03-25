@@ -4,7 +4,6 @@
   imports = [
     ./hardware-configuration.nix
     ./docker
-    ./smb-shares
   ];
 
     # Bootloader
@@ -15,15 +14,11 @@
 
     hardware.enableRedistributableFirmware = true;
 
-    boot.supportedFilesystems = [ "zfs" ];
-    boot.zfs.forceImportRoot = false;
+    #boot.supportedFilesystems = [ "zfs" ];
+    #boot.zfs.forceImportRoot = false;
     networking.hostId = "cf20a29f";    
 
-    environment.systemPackages = with pkgs; [
-      zfs
-      samba
-      veracrypt
-    ];
+    #environment.systemPackages = with pkgs; [];
   
     networking.firewall = {
       enable = true;

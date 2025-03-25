@@ -8,6 +8,7 @@
       hashedPassword = "$y$j9T$6vFvxN86DFTOIwcl.Zq6e0$gl59welPFvDnvVrAdaE4zbN8QO2Qir6rwVbrmdfPM97";
       home = "/home/mads";
       extraGroups = [ "wheel" "docker" ];
+      linger = true;
       packages = with pkgs; [
         fastfetch
         zellij
@@ -15,7 +16,6 @@
         bat
         eza
         fd
-        ripgrep
         fzf
         tealdeer
         navi
