@@ -189,7 +189,7 @@ user_pref("browser.places.speculativeConnect.enabled", false);
 /*** [SECTION 0700]: DNS / DoH / PROXY / SOCKS ***/
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.file.disable_unc_paths", true); // [HIDDEN PREF]
-user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF] [DEFAULT: "" FF118+]
+user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF] [DEFAULT: ""]
 user_pref("network.trr.mode", 3);
 
 /*** [SECTION 0800]: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS ***/
@@ -233,7 +233,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 user_pref("security.OCSP.enabled", 1); // [DEFAULT: 1]
 user_pref("security.OCSP.require", false);
 user_pref("security.cert_pinning.enforcement_level", 2);
-user_pref("security.remote_settings.crlite_filters.enabled", true);
+user_pref("security.remote_settings.crlite_filters.enabled", true); // [DEFAULT: true FF137+]
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.mixed_content.block_display_content", true); // Defense-in-depth (see 1244)
 user_pref("dom.security.https_only_mode", true); // [FF76+]
@@ -286,35 +286,33 @@ user_pref("extensions.postDownloadThirdPartyPrompt", false);
 user_pref("browser.contentblocking.category", "strict"); // [HIDDEN PREF]
 
 /*** [SECTION 2800]: SHUTDOWN & SANITIZING ***/
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-user_pref("privacy.clearOnShutdown.cache", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.cache", true); // [FF128+] [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.downloads", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.formdata", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.history", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [FF128+] [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.siteSettings", false); // [DEFAULT: false]
-user_pref("privacy.clearOnShutdown_v2.siteSettings", false); // [FF128+] [DEFAULT: false]
-user_pref("privacy.clearOnShutdown.openWindows", false);
-user_pref("privacy.clearOnShutdown.cookies", true); // Cookies
-user_pref("privacy.clearOnShutdown.offlineApps", true); // Site Data
-user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // Cookies, Site Data, Active Logins [FF128+]
+user_pref("privacy.clearOnShutdown_v2.cache", true); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.siteSettings", false); // [DEFAULT: false]
+
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.downloads", true);
+user_pref("privacy.clearOnShutdown_v2.formdata", true);
+
+user_pref("privacy.clearOnShutdown.openWindows", true);
+
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
+
 user_pref("privacy.clearSiteData.cache", true);
 user_pref("privacy.clearSiteData.cookiesAndStorage", false); // keep false until it respects "allow" site exceptions
 user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
 user_pref("privacy.clearSiteData.siteSettings", false);
-user_pref("privacy.cpd.cache", true); // [DEFAULT: true]
-user_pref("privacy.clearHistory.cache", true);
-user_pref("privacy.cpd.formdata", true); // [DEFAULT: true]
-user_pref("privacy.cpd.history", true); // [DEFAULT: true]
-user_pref("privacy.clearHistory.historyFormDataAndDownloads", true);
-user_pref("privacy.cpd.cookies", false);
-user_pref("privacy.cpd.sessions", true); // [DEFAULT: true]
-user_pref("privacy.cpd.offlineApps", false); // [DEFAULT: false]
-user_pref("privacy.clearHistory.cookiesAndStorage", false);
-user_pref("privacy.sanitize.timeSpan", 0);
+user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearSiteData.formdata", true);
 
+user_pref("privacy.clearHistory.cache", true); // [DEFAULT: true]
+user_pref("privacy.clearHistory.cookiesAndStorage", false);
+user_pref("privacy.clearHistory.historyFormDataAndDownloads", true); // [DEFAULT: true]
+
+user_pref("privacy.clearHistory.browsingHistoryAndDownloads", true); // [DEFAULT: true]
+user_pref("privacy.clearHistory.formdata", true);
+
+user_pref("privacy.sanitize.timeSpan", 0);
 
 /*** [SECTION 4000]: FPP (fingerprintingProtection) ***/
 user_pref("privacy.fingerprintingProtection.pbmode", true); // [DEFAULT: true FF118+]
