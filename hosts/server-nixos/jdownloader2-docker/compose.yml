@@ -8,4 +8,5 @@ services:
       - "./data:/config:rw"
       - "/home/mads/Downloads:/Downloads:rw"
       - "/vault:/vault:rw"
+      - "/vault2:/vault2:rw"
 

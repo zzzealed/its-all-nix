@@ -3,7 +3,7 @@
 {
   networking.wg-quick.interfaces = {
     wg0 = {
-      configFile = "/home/mads/its-all-nix/hosts/server-nixos/wgquick/wg0.conf";  # Path to your wg0.conf file
+      configFile = "/etc/wireguard/server1-DK-50.conf";  # Path to your wg0.conf file
       autostart = true;  # Automatically start the interface at boot
       postUp = [
         "ip rule add from 192.168.0.0/16 table main prio 10"
