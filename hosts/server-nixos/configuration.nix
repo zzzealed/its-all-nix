@@ -28,9 +28,8 @@
       zfs
       samba
       cachix
-      streamrip
       protonvpn-cli
-      rsync
+      pciutils
     ];
 
     boot.binfmt.emulatedSystems = [
