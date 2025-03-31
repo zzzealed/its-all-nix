@@ -10,21 +10,11 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-wsl = {
-      url = "github:nix-community/NixOS-WSL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    linus-n00b = {
-      url = "git+https://git.linus.onl/nix-monorepo.git";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    nixos-wsl,
-    linus-n00b,
     ...
   } @ inputs: let
     # These are additional arguments which we pass to each NixOS system.
@@ -48,15 +38,6 @@
     };
   in {
     nixosConfigurations = {
-      laptop-wsl = mkNixosSystem {
-        name = "laptop-wsl";
-        system = "x86_64-linux";
-        modules = [
-          ./shared/nix/mads-user.nix
-          ./shared/nix/extra-video-packages.nix
-        ];
-      };
-
       laptop2-nixos =  mkNixosSystem {
         name = "laptop2-nixos";
         system = "x86_64-linux";
