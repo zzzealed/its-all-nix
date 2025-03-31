@@ -8,6 +8,14 @@
     ./ollama
     #./qbittorrent-nox
     ./wgquick
+
+    ./gpt4free-docker
+    ./glance-docker
+    ./homeassistant-docker
+    ./qbittorrentvpn-docker
+    ./traefik-docker
+    ./jdownloader2-docker
+    ./searxng-docker
   ];
 
    config = {
@@ -75,7 +83,7 @@
     
     networking.firewall = {
       enable = true;
-      allowedTCPPorts = [ 80 443 11001 ];
+      allowedTCPPorts = [ 11001 ];
       allowedUDPPorts = [];
     };
 
