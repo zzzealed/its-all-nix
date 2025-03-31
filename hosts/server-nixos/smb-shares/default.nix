@@ -18,8 +18,8 @@
         "guest account" = "nobody";
         "map to guest" = "bad user";
       };
-      "root" = {
-        "path" = "/";
+      "home" = {
+        "path" = "/home";
         "browseable" = "yes";
         "read only" = "no";
         "guest ok" = "no";
@@ -38,6 +38,16 @@
         "force user" = "mads";
         #"force group" = "samba";
       };
+      "vault2" = {
+        "path" = "/vault2";
+        "browseable" = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
+        "create mask" = "0644";
+        "directory mask" = "0755";
+        "force user" = "mads";
+        #"force group" = "samba";
+      };      
     };
   };
   

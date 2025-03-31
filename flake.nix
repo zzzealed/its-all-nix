@@ -1,14 +1,10 @@
-  # Inputs needed for packages?
 {
   inputs ={
     nixpkgs = {
       url = "nixpkgs/nixos-24.11";
     };
-    # NOTE: Remember that this input is still pinned in `flake.lock`. You have to run
-    # `nix flake lock --update-input nixpkgs-unstable` to update the pinned
-    # version to the most recent commit on Github.
     nixpkgs-unstable = {
-      url = "nixpkgs/nixos-unstable";
+      url = "nixpkgs/nixos-unstable"; # Input is pinned in `flake.lock`. Update with `nix flake lock --update-input nixpkgs-unstable`
     };
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -23,7 +19,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
   outputs = {
     self,
     nixpkgs,
@@ -36,9 +31,8 @@
     args = { 
       flakeInputs = inputs;
       flakeOutputs = self.outputs;
-      metadata = nixpkgs.lib.importTOML ./hosts/hosts.toml;
     };
-
+    # This goes for all systems
     mkNixosSystem = { name, system, modules ? [] }: nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
@@ -47,6 +41,9 @@
         (./hosts + "/${name}/configuration.nix")
         ./shared/nix/common-nix-options.nix
         ./shared/nix/common-hm-options.nix
+        {
+          networking.hostName = name;
+        }
       ] ++ modules;
     };
   in {

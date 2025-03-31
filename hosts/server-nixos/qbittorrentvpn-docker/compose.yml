@@ -1,6 +1,6 @@
 services:
   qbittorrentvpn:
-    image: binhex/arch-qbittorrentvpn
+    image: ghcr.io/binhex/arch-qbittorrentvpn:5.0.4-3-01
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     privileged: true
@@ -29,3 +29,9 @@ services:
       - PUID=1000
       - PGID=1000
     restart: unless-stopped
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    external: true

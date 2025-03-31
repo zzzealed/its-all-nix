@@ -1,0 +1,30 @@
+---
+http:
+  routers:
+    qbittorrent:
+      rule: "Host(`qbittorrent.l.zzzealed.com`)"
+      service: qbittorrent
+      priority: 1000
+      entryPoints:
+        - web
+        - websecure
+      tls:
+        certResolver: cloudflare
+      middlewares:
+        - qb-headers
+
+  services:
+    qbittorrent:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.118:8090"
+        passHostHeader: false
+
+  middlewares:
+    # --- Headers Middleware ---
+    qb-headers:
+      headers:
+        customRequestHeaders:
+          X-Frame-Options: "SAMEORIGIN"
+          Referer: ""
+          Origin: ""

@@ -1,10 +1,12 @@
 services:
   jdownloader2:
-    image: jlesage/jdownloader-2
+    image: ghcr.io/jlesage/jdownloader-2:v25.02.1
+#    restart: unless-stopped
     ports:
       - "5800:5800"
     volumes:
       - "./data:/config:rw"
       - "/home/mads/Downloads:/Downloads:rw"
       - "/vault:/vault:rw"
+      - "/vault2:/vault2:rw"
 

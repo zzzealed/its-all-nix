@@ -5,9 +5,9 @@
     ./hardware-configuration.nix
     ./docker
     ./smb-shares
-    #./ollama
+    ./ollama
     #./qbittorrent-nox
-    #./wgquick
+    ./wgquick
   ];
 
    config = {
@@ -20,14 +20,16 @@
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
 
+    boot.zfs.extraPools = [ "vault" "vault2" ];
+
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit
       cudaPackages.cudatoolkit
       zfs
       samba
       cachix
-      streamrip
       protonvpn-cli
+      pciutils
     ];
 
     boot.binfmt.emulatedSystems = [
@@ -37,6 +39,8 @@
     hardware.graphics.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia-container-toolkit.enable = true;
+    boot.kernelModules = [ "nvidia" ];
+    boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
     hardware.nvidia = {
 
       # Modesetting is required.
@@ -71,14 +75,12 @@
     
     networking.firewall = {
       enable = true;
-      allowedTCPPorts = [ 80 443 11001 8020 3001 ];
+      allowedTCPPorts = [ 80 443 11001 ];
       allowedUDPPorts = [];
     };
 
     users.groups = {
-        vault = {
-            gid = 1001;
-        };
+        vault = { gid = 1001; };
     };
 
     # This value determines the NixOS release from which the default

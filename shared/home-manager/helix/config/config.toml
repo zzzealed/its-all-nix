@@ -14,10 +14,18 @@ select = "underline"
 hidden = false
 
 [editor.statusline]
-left = ["mode", "read-only-indicator", "spacer", "spacer", "spacer", "separator", "version-control"]
+left = ["mode", "read-only-indicator", "version-control"]
 center = ["file-name", "file-modification-indicator"]
 right = ["spinner", "position"]
-separator = "\ue725 "
 
 [editor.gutters]
 layout = ["line-numbers", "spacer", "diff"]
+
+#[keys.normal]
+#C-y = [
+#  ':sh rm -f /tmp/unique-file',
+#  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+#  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+#  ':open %sh{cat /tmp/unique-file}',
+#  ':redraw',
+#]

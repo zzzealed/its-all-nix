@@ -1,5 +1,5 @@
+# Video-related packages
 { pkgs, config, ...}:
-
 {
   config = {
     environment.systemPackages = with pkgs; [
