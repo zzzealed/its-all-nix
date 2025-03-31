@@ -9,4 +9,4 @@ services:
     volumes:
       - ./data:/data # the path before the : can be changed
     ports:
-      - 11001:80 # you can replace the 11001 with your preferred port
+      - 50847:80 # you can replace the 11001 with your preferred port

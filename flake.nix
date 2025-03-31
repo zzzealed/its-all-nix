@@ -69,7 +69,6 @@
           ./shared/nix/mads-user.nix
           ./shared/nix/extra-video-packages.nix
           ./shared/nix/additional-users.nix
-          linus-n00b.nixosModules.qbittorrent
           ./shared/nix/cachix.nix
         ];
       };

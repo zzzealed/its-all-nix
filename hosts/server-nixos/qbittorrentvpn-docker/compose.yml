@@ -5,7 +5,7 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     privileged: true
     ports:
-      - "8090:8090"
+      - "50780:50780"
       - "51820:51820"
       - "51820:51820/udp"
     volumes:
@@ -24,7 +24,7 @@ services:
       - LAN_NETWORK=192.168.0.0/24
       - NAME_SERVERS=1.1.1.1,1.0.0.1
       - DEBUG=false
-      - WEBUI_PORT=8090
+      - WEBUI_PORT=50780
       - UMASK=000
       - PUID=1000
       - PGID=1000

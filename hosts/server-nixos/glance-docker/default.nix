@@ -1,3 +1,3 @@
 {
-networking.firewall = { allowedTCPPorts = [ 8020 ]; };
+networking.firewall = { allowedTCPPorts = [ 50596 ]; };
 }

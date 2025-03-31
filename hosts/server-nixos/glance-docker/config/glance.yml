@@ -35,6 +35,9 @@ pages:
               - title: HomeAssistant
                 url: http://server.l.zzzealed.com:8123
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/home-assistant.svg
+              - title: Scrutiny
+                url: https://scrutiny.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/scrutiny.svg
                             
           - type: twitch-channels
             title: Twitch

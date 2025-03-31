@@ -6,9 +6,8 @@
     ./docker
     ./smb-shares
     ./ollama
-    #./qbittorrent-nox
     ./wgquick
-
+    ./scrutiny
     ./gpt4free-docker
     ./glance-docker
     ./homeassistant-docker
@@ -16,6 +15,7 @@
     ./traefik-docker
     ./jdownloader2-docker
     ./searxng-docker
+    ./vaultwarden-docker
   ];
 
    config = {
