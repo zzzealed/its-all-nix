@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./docker
+    ./pihole_unbound_wgeasy-docker
   ];
 
     # Bootloader
@@ -22,7 +23,7 @@
   
     networking.firewall = {
       enable = true;
-      allowedTCPPorts = [ 80 443 11001 8020 3001 ];
+      allowedTCPPorts = [];
       allowedUDPPorts = [];
     };
 
