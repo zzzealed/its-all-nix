@@ -2,9 +2,10 @@ services:
   wgeasy:
     container_name: wgeasy
     hostname: wgeasy
-    image: ghcr.io/wg-easy/wg-easy:15.0.0-beta.10
-    env_file: .env
+    image: ghcr.io/wg-easy/wg-easy:14
     restart: unless-stopped
+    environment:
+      - WG_HOST=ddns.zzzealed.com
     volumes:
       - ./data/wgeasy:/etc/wireguard
       - /lib/modules:/lib/modules:ro
@@ -28,21 +29,18 @@ services:
     container_name: pihole-unbound
     hostname: pihole
     domainname: pihole.local
-    image: ghcr.io/mpgirro/docker-pihole-unbound:pr285-7-db9a9475daf7d621a6c53585f61f7e95ae9b32fd
+    image: ghcr.io/mpgirro/docker-pihole-unbound:2025.03.0
     env_file: .env
     restart: unless-stopped
     environment:
-      TZ: Europe/Copenhagen
-      FTLCONF_LOCAL_IPV4: ${FTLCONF_LOCAL_IPV4}
-      WEBPASSWORD: ${PIHOLE_PASS}
-      WEBTHEME: default-dark
-      REV_SERVER: "true"
-      REV_SERVER_TARGET: ${REV_SERVER_TARGET}
-      REV_SERVER_DOMAIN: ${REV_SERVER_DOMAIN}
-      REV_SERVER_CIDR: ${REV_SERVER_CIDR}
-      PIHOLE_DNS_: 127.0.0.1#5335
-      DNSSEC: "true"
-      DNSMASQ_LISTENING: "all"
+      - FTLCONF_LOCAL_IPV4=${FTLCONF_LOCAL_IPV4}
+      - FTLCONF_webserver_api_password=${WEBPASSWORD}
+      - FTLCONF_webserver_interface_theme="default-dark"
+      - FTLCONF_dns_revServers=${REV_SERVER:-false},${REV_SERVER_CIDR},${REV_SERVER_TARGET},${REV_SERVER_DOMAIN}
+      - FTLCONF_dns_upstreams=127.0.0.1#5335
+      #- FTLCONF_dns_dnssec="true"
+      #- FTLCONF_dns_listeningMode=single
+      - FTLCONF_webserver_port=80
     volumes:
       - ./data/pihole/etc_pihole-unbound:/etc/pihole:rw
       - ./data/pihole/etc_pihole_dnsmasq-unbound:/etc/dnsmasq.d:rw
