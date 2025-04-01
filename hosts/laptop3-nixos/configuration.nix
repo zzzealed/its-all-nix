@@ -1,3 +1,4 @@
+{ pkgs, config, flakeInputs, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
