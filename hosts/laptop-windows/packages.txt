@@ -1,0 +1,14 @@
+Microsoft.Powershell
+Mozilla.Firefox.DeveloperEdition
+Helix.Helix
+Gyan.FFmpeg
+LocalSend.LocalSend
+yt-dlp.yt-dlp
+Git.Git
+Giorgiotani.Peazip
+AntibodySoftware.WizTree
+Wireguard.Wireguard
+SpikeHD.Dorion
+OBSProject.OBSStudio
+Alacritty.Alacritty
+Fastfetch-cli.Fastfetch

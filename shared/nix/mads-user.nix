@@ -11,12 +11,13 @@
       linger = true;
       packages = with pkgs; [
         fastfetch
-        zellij
+        unstable.zellij
         unstable.yazi
+        unstable.uutils-coreutils
+        tokei
         bat
-        eza
-        fd
         fzf
+        skim
         tealdeer
         navi
       ];
@@ -28,6 +29,7 @@
         ../home-manager/mpv
         ../home-manager/git
         ../home-manager/helix
+        ../home-manager/yazi
       ];
     };
   };

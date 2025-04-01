@@ -1,12 +1,12 @@
 services:
   traefik:
-    image: docker.io/library/traefik:v3.3.4
+    image: docker.io/library/traefik:v3.3.5
     container_name: traefik
     ports:
       - 80:80
       - 443:443
       # --> (Optional) Enable Dashboard, don't do in production
-      #- 8080:8080
+      #- 50796:8080
       # <--
     volumes:
       - /run/docker.sock:/run/docker.sock:ro

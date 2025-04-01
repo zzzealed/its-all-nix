@@ -6,8 +6,16 @@
     ./docker
     ./smb-shares
     ./ollama
-    #./qbittorrent-nox
     ./wgquick
+    ./scrutiny
+    ./gpt4free-docker
+    ./glance-docker
+    ./homeassistant-docker
+    ./qbittorrentvpn-docker
+    ./traefik-docker
+    ./jdownloader2-docker
+    ./searxng-docker
+    ./vaultwarden-docker
   ];
 
    config = {
@@ -28,9 +36,8 @@
       zfs
       samba
       cachix
-      streamrip
       protonvpn-cli
-      rsync
+      pciutils
     ];
 
     boot.binfmt.emulatedSystems = [
@@ -76,7 +83,7 @@
     
     networking.firewall = {
       enable = true;
-      allowedTCPPorts = [ 80 443 11001 8020 3001 ];
+      allowedTCPPorts = [ 11001 ];
       allowedUDPPorts = [];
     };
 

@@ -14,12 +14,33 @@ pages:
             cache: 1m
             title: Selfhosted
             sites:
+              - title: Router
+                url: http://192.168.0.1:80
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pfsense.svg
               - title: Vaultwarden
                 url: https://vault.l.zzzealed.com
-                icon: https://raw.githubusercontent.com/dani-garcia/vaultwarden/ef4bff09eb4414117cd8ea25c809988872e2016b/resources/vaultwarden-icon-white.svg
-              - title: Dashdot
-                url: https://dashdot.l.zzzealed.com
-                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/dashdot.png
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/vaultwarden.svg
+              - title: Pihole
+                url: https://pihole.l.zzzealed.com/admin
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pi-hole.svg
+              - title: GPT4Free
+                url: https://gpt4free.l.zzzealed.com/chat
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/chatgpt.svg
+              - title: JDownloader2
+                url: https://jd2.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/webp/jdownloader.webp
+              - title: qBittorrent
+                url: https://qbit.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/qbittorrent.svg
+              - title: WG-Easy
+                url: https://wg.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/wireguard.svg
+              - title: HomeAssistant
+                url: http://ha.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/home-assistant.svg
+              - title: Scrutiny
+                url: https://scrutiny.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/scrutiny.svg
                             
           - type: twitch-channels
             title: Twitch
@@ -36,40 +57,6 @@ pages:
 
       - size: full
         widgets:
-          - type: html
-            source: |
-             <div style="display: flex; gap: 10px; margin-bottom: 10px;">
-              <p>CPU</p> 
-              <iframe
-                src="https://dashdot.l.zzzealed.com?graph=cpu&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
-                style="border-radius: 0px"
-                allowtransparency="true"
-                frameborder="0"
-                width="255"
-                height="125"
-              ></iframe>
-             
-               <p>RAM</p>
-               <iframe
-                src="https://dashdot.l.zzzealed.com?graph=ram&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
-                style="border-radius: 0px"
-                allowtransparency="true"
-                frameborder="0"
-                width="255"
-                height="125"
-              ></iframe>
-             
-              <p>STORAGE</p>
-              <iframe
-                src="https://dashdot.l.zzzealed.com?graph=storage&showPercentage=true&innerRadius=0&gap=0&textSize=15&textOffset=10"
-                style="border-radius: 0px"
-                allowtransparency="true"
-                frameborder="0"
-                width="255"
-                height="125"
-              ></iframe>
-             </div>
-
           - type: rss
             title: News
             style: horizontal-cards
