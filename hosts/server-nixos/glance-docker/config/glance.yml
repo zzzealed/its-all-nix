@@ -14,6 +14,9 @@ pages:
             cache: 1m
             title: Selfhosted
             sites:
+              - title: Router
+                url: http://192.168.0.1:80
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pfsense.svg
               - title: Vaultwarden
                 url: https://vault.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/vaultwarden.svg
@@ -33,7 +36,7 @@ pages:
                 url: https://wg.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/wireguard.svg
               - title: HomeAssistant
-                url: http://server.l.zzzealed.com:8123
+                url: http://ha.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/home-assistant.svg
               - title: Scrutiny
                 url: https://scrutiny.l.zzzealed.com
