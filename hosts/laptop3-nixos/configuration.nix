@@ -11,10 +11,10 @@
   # boot.loader.grub.efiInstallAsRemovable = true;
   # boot.loader.efi.efiSysMountPoint = "/boot/efi";
   # Define on which hard drive you want to install Grub.
-  # boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
+  boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   environment.systemPackages = with pkgs; [
-    makemkv 
+    unstable.makemkv 
   ];
 
 
@@ -37,5 +37,6 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment?
 
+  home-manager.users.mads.home.stateVersion = "24.05";
 }
 
