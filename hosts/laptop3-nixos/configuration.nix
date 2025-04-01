@@ -14,7 +14,11 @@
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
   environment.systemPackages = with pkgs; [
-    unstable.makemkv 
+    unstable.makemkv
+    # We're just praying at this point
+    libdvdnav
+    libdvdcss
+    libdvdread
   ];
 
 
