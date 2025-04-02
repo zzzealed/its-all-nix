@@ -5,7 +5,7 @@ services:
     image: ghcr.io/wg-easy/wg-easy:14
     restart: unless-stopped
     environment:
-      - WG_HOST=ddns.zzzealed.com
+      - WG_HOST=iout43243twni.zapto.org
     volumes:
       - ./data/wgeasy:/etc/wireguard
       - /lib/modules:/lib/modules:ro
