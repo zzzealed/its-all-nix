@@ -7,4 +7,4 @@ services:
         volumes:
             - ./data/har_and_cookies:/app/har_and_cookies
             - ./data/generated_images:/app/generated_images
-        image: hlohaus789/g4f:0.5.0.1
+        image: hlohaus789/g4f:0.5.0.2

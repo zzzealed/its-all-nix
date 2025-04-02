@@ -55,8 +55,10 @@
         name = "laptop3-nixos";
         system = "x86_64-linux";
         modules = [
+          ./shared/nix/common-nixos-options.nix
           ./shared/nix/mads-user.nix
-          ./shared/nix/desktop-essentials.nix
+          ./shared/nix/de-essentials.nix
+          ./shared/nix/gnome-essentials.nix
           ./shared/nix/extra-video-packages.nix
         ];
       };
