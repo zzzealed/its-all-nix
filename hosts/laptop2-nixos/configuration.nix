@@ -19,13 +19,27 @@
       servo
       qbittorrent
       gnome-software
+      ghostty
+      streamcontroller
     ];
+
+    # Bootloader
+    boot.loader.systemd-boot.enable = true;
+    #boot.loader.grub.enable = true;
+    #boot.loader.grub.device = "/dev/sda";
+    #boot.loader.grub.useOSProber = true;
+
     systemd.sleep.extraConfig = ''
       AllowSuspend=no
       AllowHibernation=no
       AllowHybridSleep=no
       AllowSuspendThenHibernate=no
     '';
+
+    boot.binfmt.emulatedSystems = [
+      "aarch64-linux"
+    ];
+
 
     services.flatpak.enable = true;
     systemd.services.flatpak-repo = {
