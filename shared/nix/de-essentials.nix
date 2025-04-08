@@ -8,8 +8,8 @@
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
     environment.systemPackages = with pkgs; [
       unstable.firefox
-      dorion
-      tidal-hifi
+      unstable.dorion
+      unstable.tidal-hifi
       unstable.input-leap
     ];
   };
