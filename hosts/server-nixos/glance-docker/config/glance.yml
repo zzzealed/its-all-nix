@@ -41,6 +41,9 @@ pages:
               - title: Scrutiny
                 url: https://scrutiny.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/scrutiny.svg
+              - title: MakeMKV
+                url: https://makemkv.l.zzzealed.com
+                icon: https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/makemkv-icon.png&w=110
                             
           - type: twitch-channels
             title: Twitch

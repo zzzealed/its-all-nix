@@ -1,0 +1,14 @@
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:2025.3.4
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    environment:
+        TZ: Europe/Copenhagen
+        PUID: 1000
+        PGID: 1000
+    volumes:
+      - ./data:/config:rw
+    ports:
+      - 50888:8123
