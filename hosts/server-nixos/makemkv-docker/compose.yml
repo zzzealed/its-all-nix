@@ -1,6 +1,6 @@
 services:
   makemkv:
-    image: ghcr.io/jlesage/makemkv:v25.02.3
+    image: ghcr.io/jlesage/makemkv:v25.04.1
     ports:
       - "50017:5800"
     volumes:
