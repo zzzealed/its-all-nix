@@ -11,8 +11,7 @@
       linger = true;
       packages = with pkgs; [
         fastfetch
-        unstable.zellij
-        unstable.yazi
+        unstable.zellij     
         unstable.uutils-coreutils
         tokei
         bat

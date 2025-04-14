@@ -12,6 +12,7 @@ services:
       - ./data:/config
       - /etc/localtime:/etc/localtime:ro
       - /vault:/vault:rw
+      - /vault2:/vault2:rw
     environment:
       - VPN_ENABLED=yes
       - VPN_USER=wraaath@proton.me+pmp

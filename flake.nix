@@ -1,20 +1,18 @@
 {
   inputs ={
-    nixpkgs = {
-      url = "nixpkgs/nixos-24.11";
-    };
-    nixpkgs-unstable = {
-      url = "nixpkgs/nixos-unstable"; # Input is pinned in `flake.lock`. Update with `nix flake lock --update-input nixpkgs-unstable`
-    };
+    nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; # Input is pinned in `flake.lock`. Update with `nix flake lock --update-input nixpkgs-unstable`
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yazi.url = "github:sxyazi/yazi";
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    yazi,
     ...
   } @ inputs: let
     # These are additional arguments which we pass to each NixOS system.

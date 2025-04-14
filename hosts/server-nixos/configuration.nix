@@ -16,6 +16,9 @@
     ./jdownloader2-docker
     ./searxng-docker
     ./vaultwarden-docker
+    ./calibrewebautomated
+    ./makemkv-docker
+    ./jackett-docker
   ];
 
    config = {
@@ -28,7 +31,7 @@
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
 
-    boot.zfs.extraPools = [ "vault" "vault2" ];
+    boot.zfs.extraPools = [ "vault" ];
 
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit
@@ -38,6 +41,9 @@
       cachix
       protonvpn-cli
       pciutils
+      libdvdnav
+      libdvdcss
+      libdvdread
     ];
 
     boot.binfmt.emulatedSystems = [
@@ -47,7 +53,7 @@
     hardware.graphics.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia-container-toolkit.enable = true;
-    boot.kernelModules = [ "nvidia" ];
+    boot.kernelModules = [ "nvidia" "sg" ];
     boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
     hardware.nvidia = {
 
