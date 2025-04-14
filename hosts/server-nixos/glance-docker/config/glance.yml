@@ -24,7 +24,7 @@ pages:
                 url: https://pihole.l.zzzealed.com/admin
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pi-hole.svg
               - title: GPT4Free
-                url: https://gpt4free.l.zzzealed.com/chat
+                url: https://g4f.l.zzzealed.com/chat
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/chatgpt.svg
               - title: JDownloader2
                 url: https://jd2.l.zzzealed.com
@@ -44,6 +44,9 @@ pages:
               - title: MakeMKV
                 url: https://makemkv.l.zzzealed.com
                 icon: https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/makemkv-icon.png&w=110
+              - title: Calibre Web Automated
+                url: https://calibre.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/calibre-web.svg
                             
           - type: twitch-channels
             title: Twitch

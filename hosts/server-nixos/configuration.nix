@@ -16,7 +16,7 @@
     ./jdownloader2-docker
     ./searxng-docker
     ./vaultwarden-docker
-    ./calibrewebautomated
+    ./calibrewebautomated-docker
     ./makemkv-docker
     ./jackett-docker
   ];

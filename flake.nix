@@ -25,6 +25,9 @@
       inherit system;
       modules = [
         { _module.args = args; }
+				({ pkgs, ... }: {
+					environment.systemPackages = [ yazi.packages.${pkgs.system}.default ];
+				})
         home-manager.nixosModules.default
         (./hosts + "/${name}/configuration.nix")
         ./shared/nix/common-nix-options.nix
