@@ -1,5 +1,5 @@
 Microsoft.Powershell
-Mozilla.Firefox.DeveloperEdition
+Mozilla.Firefox
 Helix.Helix
 Gyan.FFmpeg
 LocalSend.LocalSend
@@ -12,3 +12,15 @@ SpikeHD.Dorion
 OBSProject.OBSStudio
 Alacritty.Alacritty
 Fastfetch-cli.Fastfetch
+CodecGuide.K-LiteCodecPack.Basic
+MediaArea.MediaInfo.GUI
+TagStudioDev.TagStudio
+KDE.Krita
+KDE.Kdenlive
+sxyazi.yazi
+GlennDelahoy.SnappyDriverInstallerOrigin
+uutils.coreutils
+AutoHotkey.AutoHotkey
+TheDocumentFoundation.LibreOffice
+Alex313031.Thorium.AVX2
+Proton.ProtonVPN
