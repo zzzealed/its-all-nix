@@ -9,4 +9,5 @@ services:
       - "/home/mads/Downloads:/Downloads:rw"
       - "/vault:/vault:rw"
       - "/vault2:/vault2:rw"
-
+    environment:
+      - DARK_MODE=1

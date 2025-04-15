@@ -47,6 +47,9 @@ pages:
               - title: Calibre Web Automated
                 url: https://calibre.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/calibre-web.svg
+              - title: OpenWebUI
+                url: https://chat.l.zzzealed.com
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/open-webui.svg
                             
           - type: twitch-channels
             title: Twitch

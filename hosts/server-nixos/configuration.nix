@@ -19,6 +19,7 @@
     ./calibrewebautomated-docker
     ./makemkv-docker
     ./jackett-docker
+    ./openwebui-docker
   ];
 
    config = {
