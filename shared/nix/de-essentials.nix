@@ -10,7 +10,8 @@
       unstable.firefox
       unstable.dorion
       unstable.tidal-hifi
-      unstable.input-leap
+      input-leap
+      kdePackages.kdeconnect-kde
     ];
   };
 }
