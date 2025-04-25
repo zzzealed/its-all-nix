@@ -19,6 +19,7 @@
         skim
         tealdeer
         navi
+        mozillavpn
       ];
     };
     # HM user specific stuff
