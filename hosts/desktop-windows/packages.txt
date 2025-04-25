@@ -1,5 +1,6 @@
 Microsoft.Powershell
 Mozilla.Firefox
+Mozilla.VPN
 Helix.Helix
 Gyan.FFmpeg
 LocalSend.LocalSend

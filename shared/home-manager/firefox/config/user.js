@@ -15,7 +15,7 @@ user_pref("browser.ctrlTab.sortByRecentlyUsed", true); // Cycle ctrl+tab thru re
 user_pref("browser.compactmode.show", true); // Compact mode
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
 //user_pref("browser.backspace_action", 0); // Restore backspace to return to previous page
-//user_pref("browser.toolbars.bookmarks.visibility", "always"); // Always show bookmarks bar
+user_pref("browser.toolbars.bookmarks.visibility", "never"); // Always show bookmarks bar
 user_pref("browser.vpn_promo.enabled", false); // Bye bye VPN promo
 user_pref("extensions.pocket.enabled", false); // I don't use Firefox Pocket
 user_pref("middlemouse.paste", false); // No paste with mousewheel click
@@ -23,8 +23,11 @@ user_pref("widget.non-native-theme.scrollbar.style", 4); // Win10 like scrollbar
 user_pref("devtools.chrome.enabled", true); // Enable devtools
 user_pref("findbar.highlightAll", true); // Highlight all by default with find
 user_pref("image.http.accept", "*/*"); // Remove webp as the default image format. Default = "image/webp,*/*"
-//pref("sidebar.revamp", true); // Vertical tabs in FF nightly
+//user_pref("sidebar.revamp", true); // Vertical tabs in FF nightly
+user_pref("sidebar.verticalTabs", true); // NEW vertical tabs option
+user_pref("sidebar.visibility", "always-show"); // Always show sidebar
 user_pref("layout.word_select.eat_space_to_next_word", false); // Don't select the space next to a word when selecting a word
+
 
 /* 2. Fastfox version: 133 */
 /****************************************************************************
@@ -190,7 +193,7 @@ user_pref("browser.places.speculativeConnect.enabled", false);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.file.disable_unc_paths", true); // [HIDDEN PREF]
 user_pref("network.gio.supported-protocols", ""); // [HIDDEN PREF] [DEFAULT: ""]
-user_pref("network.trr.mode", 3);
+user_pref("network.trr.mode", 5);
 
 /*** [SECTION 0800]: LOCATION BAR / SEARCH BAR / SUGGESTIONS / HISTORY / FORMS ***/
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
