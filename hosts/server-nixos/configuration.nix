@@ -12,6 +12,7 @@
     ./glance-docker
     ./homeassistant-docker
     ./qbittorrentvpn-docker
+    ./qbittorrent-docker
     ./traefik-docker
     ./jdownloader2-docker
     ./searxng-docker

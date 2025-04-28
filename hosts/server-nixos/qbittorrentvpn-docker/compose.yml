@@ -15,8 +15,8 @@ services:
       - /vault2:/vault2:rw
     environment:
       - VPN_ENABLED=yes
-      - VPN_USER=wraaath@proton.me+pmp
-      - VPN_PROV=protonvpn
+#      - VPN_USER=wraaath@proton.me+pmp
+      - VPN_PROV=custom
       - VPN_CLIENT=wireguard
       - ENABLE_STARTUP_SCRIPTS=no
       - ENABLE_PRIVOXY=no
