@@ -31,6 +31,7 @@
         ../home-manager/helix
         ../home-manager/yazi
         ../home-manager/firefox
+        ../home-manager/bash
       ];
     };
   };

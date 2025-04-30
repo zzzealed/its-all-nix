@@ -5,7 +5,7 @@
     nix.settings.experimental-features = ["nix-command" "flakes"]; # Enable flakes and nix3 commands globally
     nixpkgs.config.allowUnfree = true; # Allow unfree packages in global config
     users.mutableUsers = false; # If set to false, the contents of the user and group files will simply be replaced on system activation. This also holds for the user passwords; all changed passwords will be reset according to the users.users configuration on activation.
-    environment.systemPackages = with pkgs; [ vim tree git wget ]; # The very essential packages
+    environment.systemPackages = with pkgs; [ vim tree git wget home-manager ]; # The very essential packages
     # SSH
     services.openssh = {
       enable = true;
