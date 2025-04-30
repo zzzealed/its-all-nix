@@ -30,6 +30,7 @@
         ../home-manager/git
         ../home-manager/helix
         ../home-manager/yazi
+        ../home-manager/firefox
       ];
     };
   };

@@ -20,11 +20,11 @@
     };
     # Configure keymap in X11
     services.xserver.xkb = {
-      layout = "dk";
+      layout = "us";
       variant = "";
     };
     # Configure console keymap
-    console.keyMap = "dk-latin1";
+    console.keyMap = "us";
     # Sound
     hardware.pulseaudio.enable = false;
     security.rtkit.enable = true;

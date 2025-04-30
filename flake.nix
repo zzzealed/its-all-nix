@@ -39,6 +39,17 @@
     };
   in {
     nixosConfigurations = {
+      desktop-nixos = mkNixosSystem {
+        name = "desktop-nixos";
+        system = "x86_64-linux";
+        modules = [
+	  ./shared/nix/common-nixos-options.nix
+          ./shared/nix/mads-user.nix
+          ./shared/nix/de-essentials.nix
+          ./shared/nix/extra-video-packages.nix
+        ];	
+      };
+
       laptop2-nixos =  mkNixosSystem {
         name = "laptop2-nixos";
         system = "x86_64-linux";
