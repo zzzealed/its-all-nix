@@ -11,8 +11,10 @@
       cifs-utils
       ghostty
       streamcontroller
-      kdePackages.systemsettings
+      protonup-qt
     ];
+
+  programs.steam.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true; boot.loader.efi.canTouchEfiVariables = true;
@@ -24,6 +26,10 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = false; # Set to false to use the proprietary kernel module
+
+  programs.xwayland.enable = true;
+
+  xdg.icons.fallbackCursorThemes = [ "breeze_cursors" ];
 
   # KDE
   services.displayManager.sddm.enable = true; services.desktopManager.plasma6.enable = true;
