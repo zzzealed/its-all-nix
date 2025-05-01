@@ -12,7 +12,17 @@
       ghostty
       streamcontroller
       protonup-qt
+      vesktop
     ];
+
+
+    home-manager.users.mads = {
+      xdg.enable = true;
+      imports = [
+        ./home-manager/mpv
+      ];
+    };
+
 
   programs.steam.enable = true;
 
