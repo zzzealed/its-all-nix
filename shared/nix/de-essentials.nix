@@ -16,6 +16,11 @@
       unstable.tidal-hifi
       input-leap
       kdePackages.kdeconnect-kde
+      xdg-desktop-portal
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-kde
+      lan-mouse
     ];
+    networking.firewall = { allowedTCPPorts = [ 24800 ]; }; # for Input Leap
   };
 }
