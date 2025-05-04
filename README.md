@@ -5,7 +5,7 @@
 ## How to use
 1. Download the repository:
 ```sh
-curl -O https://github.com/zzzealed/its-all-nix/archive/refs/heads/main.tar.gz`
+curl -O https://github.com/zzzealed/its-all-nix/archive/refs/heads/main.tar.gz
 ```
 2. Unzip with:
 ```sh
