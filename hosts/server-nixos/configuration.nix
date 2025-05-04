@@ -33,7 +33,7 @@
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
 
-    boot.zfs.extraPools = [ "vault" ];
+    boot.zfs.extraPools = [ "vault" ]; # Import encrypted pool with `sudo zpool import -l <pool_name>`
 
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit
@@ -51,6 +51,8 @@
     boot.binfmt.emulatedSystems = [
       "aarch64-linux"
     ];
+
+    services.sanoid.datasets."vault/data".daily = 1;
 
     hardware.graphics.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
