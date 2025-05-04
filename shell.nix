@@ -1,4 +1,5 @@
 # Stolen from https://github.com/jnsgruk/nixos-config/blob/main/shell.nix
+{ pkgs ? import <nixpkgs> {} }:
 {
   default = pkgs.mkShell {
     name = "flake";
