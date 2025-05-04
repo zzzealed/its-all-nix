@@ -9,18 +9,18 @@
     xdg.portal = {
       enable = true;
       extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-kde ];
+      config.common.default = [ "kde" ];
     };
     environment.systemPackages = with pkgs; [
       unstable.firefox
       unstable.dorion
       unstable.tidal-hifi
-      input-leap
       kdePackages.kdeconnect-kde
       xdg-desktop-portal
       xdg-desktop-portal-gtk
       xdg-desktop-portal-kde
       lan-mouse
     ];
-    networking.firewall = { allowedTCPPorts = [ 24800 ]; }; # for Input Leap
+    networking.firewall = { allowedTCPPorts = [ 4242 ]; }; # for lan-mouse
   };
 }

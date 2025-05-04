@@ -1,0 +1,9 @@
+release_bind = [ "KeyLeftCtrl", "KeyLeftAlt", "KeyX" ]
+
+port = 4242
+
+[[clients]]
+position = "left"
+hostname = "laptop2-nixos"
+activate_on_startup = true
+ips = ["192.168.0.31"]

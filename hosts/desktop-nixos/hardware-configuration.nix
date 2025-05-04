@@ -24,6 +24,12 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/mnt/Samsung" =
+    { device = "/dev/disk/by-uuid/EEA23721A236EE29";
+      fsType = "ntfs-3g";
+      options = [ "rw" "uid=1000"];
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

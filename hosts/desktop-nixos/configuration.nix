@@ -13,17 +13,51 @@
       streamcontroller
       protonup-qt
       vesktop
+      scrcpy
+      android-tools
+      ntfs3g
+      samba
     ];
 
+  programs.adb.enable = true;
 
-    home-manager.users.mads = {
-      xdg.enable = true;
-      imports = [
-        ./home-manager/mpv
-      ];
-    };
+  home-manager.users.mads = {
+    xdg.enable = true;
+    imports = [
+      ./home-manager/mpv
+      ./home-manager/lan-mouse
+    ];
+  };
 
+# Mount Samba shares
+  fileSystems."/mnt/server-nixos/vault" = {
+    device = "//server.l.zzzealed.com/vault";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
 
+    in ["${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
+  };
+  fileSystems."/mnt/server-nixos/vault2" = {
+    device = "//server.l.zzzealed.com/vault2";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+
+    in ["${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
+  };
+  fileSystems."/mnt/server-nixos/home" = {
+    device = "//server.l.zzzealed.com/home";
+    fsType = "cifs";
+    options = let
+      # this line prevents hanging on network split
+      automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+
+    in ["${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
+  };
+  
   programs.steam.enable = true;
 
   # Bootloader.
@@ -36,6 +70,13 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = false; # Set to false to use the proprietary kernel module
+
+  boot.supportedFilesystems = [ "ntfs" ];
+  fileSystems."/mnt/Samsung" =
+    { device = "/dev/disk/by-uuid/EEA23721A236EE29";
+      fsType = "ntfs-3g"; 
+      options = [ "rw" "uid=1000"];
+    };
 
   programs.xwayland.enable = true;
 
