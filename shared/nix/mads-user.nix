@@ -32,6 +32,7 @@
         ../home-manager/yazi
         ../home-manager/firefox
         ../home-manager/bash
+        ../home-manager/ghostty
       ];
     };
   };

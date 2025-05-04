@@ -20,6 +20,8 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal-kde
       lan-mouse
+      libreoffice
+      ungoogled-chromium
     ];
     networking.firewall = { allowedTCPPorts = [ 4242 ]; }; # for lan-mouse
   };
