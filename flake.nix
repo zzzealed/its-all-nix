@@ -15,16 +15,14 @@
     yazi,
     ...
   } @ inputs: let
-    # These are additional arguments which we pass to each NixOS system.
-    args = { 
-      flakeInputs = inputs;
-      flakeOutputs = self.outputs;
-    };
     # This goes for all systems
     mkNixosSystem = { name, system, modules ? [] }: nixpkgs.lib.nixosSystem {
       inherit system;
+      specialArgs = { # We use specialArgs rather than the option _module.args to ensure that these can be used in import statements.
+        flakeInputs = inputs;
+        flakeOutputs = self.outputs;
+      };
       modules = [
-        { _module.args = args; }
         home-manager.nixosModules.default
         (./hosts + "/${name}/configuration.nix")
         ./shared/nix/common-nix-options.nix
