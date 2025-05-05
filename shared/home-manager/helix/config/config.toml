@@ -1,4 +1,14 @@
-theme = "carbonfox"
+theme = "modus_vivendi_tinted"
+# carbonfox
+# doom_acario_dark
+# base16_default
+# modus_vivendi_tinted
+# naysayer
+# onedark
+# ttox
+
+
+
 
 [editor]
 line-number = "relative"

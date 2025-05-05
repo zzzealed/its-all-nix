@@ -17,6 +17,7 @@
       android-tools
       ntfs3g
       samba
+      kdePackages.dolphin-plugins
     ];
 
   programs.adb.enable = true;

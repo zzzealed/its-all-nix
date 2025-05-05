@@ -1,5 +1,5 @@
 {
-  inputs ={
+  inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; # Input is pinned in `flake.lock`. Update with `nix flake lock --update-input nixpkgs-unstable`
     home-manager = {
@@ -7,12 +7,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi.url = "github:sxyazi/yazi";
+    tagstudio = {
+      url = "github:TagStudioDev/TagStudio";
+      #inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
     yazi,
+    tagstudio,
     ...
   } @ inputs: let
     # This goes for all systems
@@ -21,9 +26,19 @@
       specialArgs = { # We use specialArgs rather than the option _module.args to ensure that these can be used in import statements.
         flakeInputs = inputs;
         flakeOutputs = self.outputs;
+        inherit inputs;
       };
       modules = [
         home-manager.nixosModules.default
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = {
+              inherit inputs self yazi;
+            };
+          };
+        }
         (./hosts + "/${name}/configuration.nix")
         ./shared/nix/common-nix-options.nix
         ./shared/nix/common-hm-options.nix
@@ -38,7 +53,7 @@
         name = "desktop-nixos";
         system = "x86_64-linux";
         modules = [
-	  ./shared/nix/common-nixos-options.nix
+	        ./shared/nix/common-nixos-options.nix
           ./shared/nix/mads-user.nix
           ./shared/nix/de-essentials.nix
           ./shared/nix/extra-video-packages.nix

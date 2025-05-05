@@ -1,4 +1,4 @@
-{ pkgs, flakeInputs, ... }:
+{ config, pkgs, inputs, flakeInputs, ... }:
 {
   imports = [
     ../home-manager/localsend
@@ -23,6 +23,7 @@
       lan-mouse
       libreoffice
       ungoogled-chromium
+#      inputs.tagstudio.packages.${pkgs.stdenv.hostPlatform.system}.tagstudio
     ];
     networking.firewall = { allowedTCPPorts = [ 24800 4242 ]; }; # for lan-mouse
   };
