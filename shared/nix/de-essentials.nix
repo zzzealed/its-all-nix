@@ -19,10 +19,11 @@
       xdg-desktop-portal
       xdg-desktop-portal-gtk
       xdg-desktop-portal-kde
+      input-leap
       lan-mouse
       libreoffice
       ungoogled-chromium
     ];
-    networking.firewall = { allowedTCPPorts = [ 4242 ]; }; # for lan-mouse
+    networking.firewall = { allowedTCPPorts = [ 24800 4242 ]; }; # for lan-mouse
   };
 }
