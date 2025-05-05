@@ -1,4 +1,6 @@
 [user]
-		email = zeal@zzzealed.com
-		name = Zeal
-		editor = hx
+	email = zeal@zzzealed.com
+	name = Zeal
+
+[core]
+	editor = hx
