@@ -2,7 +2,7 @@
 
 {
   config = {
-    home.packages = [ yazi.packages.${pkgs.system}.default ];
+    home.packages = [ yazi.packages.${pkgs.system}.default pkgs.ueberzugpp ];
     home.file.".config/yazi" = {
       source = ./config;
       recursive = true;

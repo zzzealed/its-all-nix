@@ -18,6 +18,7 @@
       ntfs3g
       samba
       kdePackages.dolphin-plugins
+      kdePackages.filelight
     ];
 
   programs.adb.enable = true;
