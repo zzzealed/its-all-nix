@@ -35,5 +35,7 @@
       pulse.enable = true;
       #jack.enable = true;
     };
+    # Packages
+    environment.systemPackages = with pkgs; [ gparted ]; # The very essential package
   };
 }

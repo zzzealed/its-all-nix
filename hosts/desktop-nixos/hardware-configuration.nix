@@ -24,13 +24,9 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/mnt/Samsung" =
-    { device = "/dev/disk/by-uuid/EEA23721A236EE29";
-      fsType = "ntfs-3g";
-      options = [ "rw" "uid=1000"];
-    };
-
-  swapDevices = [ ];
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/665aa04d-77a5-4f0f-a1a7-40319afe47f3"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

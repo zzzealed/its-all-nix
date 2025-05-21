@@ -11,7 +11,6 @@
       cifs-utils
       ghostty
       streamcontroller
-      protonup-qt
       vesktop
       scrcpy
       android-tools
@@ -19,6 +18,12 @@
       samba
       kdePackages.dolphin-plugins
       kdePackages.filelight
+      kdePackages.xdg-desktop-portal-kde
+      prismlauncher
+      kdePackages.plasma-browser-integration
+      gamescope
+      rclone
+      krita
     ];
 
   programs.adb.enable = true;
@@ -28,10 +33,11 @@
     imports = [
       ./home-manager/mpv
       ./home-manager/lan-mouse
+      ./home-manager/mangohud
     ];
   };
 
-# Mount Samba shares
+  # Mount Samba shares
   fileSystems."/mnt/server-nixos/vault" = {
     device = "//server.l.zzzealed.com/vault";
     fsType = "cifs";
@@ -59,8 +65,16 @@
 
     in ["${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
   };
+
+  # Mount WebDAV share
+  services.davfs2.enable = true;
   
-  programs.steam.enable = true;
+  
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
+  };
+  programs.gamemode.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true; boot.loader.efi.canTouchEfiVariables = true;

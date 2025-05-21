@@ -2,7 +2,7 @@
 
 {
   config = {
-    home.packages = [ mangohud ];
+    home.packages = [ pkgs.mangohud ];
     home.file.".config/MangoHud" = {
       source = ./config;
       recursive = true;

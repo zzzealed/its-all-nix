@@ -9,4 +9,6 @@ shell-integration-features = cursor
 shell-integration-features = sudo
 shell-integration-features = title
 
+copy-on-select = false
+
 theme = Grey-green
