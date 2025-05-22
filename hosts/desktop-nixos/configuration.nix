@@ -18,15 +18,17 @@
       samba
       kdePackages.dolphin-plugins
       kdePackages.filelight
-      kdePackages.xdg-desktop-portal-kde
       prismlauncher
-      kdePackages.plasma-browser-integration
       gamescope
       rclone
       krita
     ];
 
   programs.adb.enable = true;
+
+  programs.kdeconnect.enable = true;
+
+  programs.firefox.nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
 
   home-manager.users.mads = {
     xdg.enable = true;
@@ -68,7 +70,6 @@
 
   # Mount WebDAV share
   services.davfs2.enable = true;
-  
   
   programs.steam = {
     enable = true;

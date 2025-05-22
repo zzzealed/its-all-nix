@@ -8,18 +8,12 @@
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
     xdg.portal = {
       enable = true;
-      extraPortals = with pkgs; [ xdg-desktop-portal-kde ];
+      extraPortals = with pkgs; [ xdg-desktop-portal-kde xdg-desktop-portal-wlr xdg-desktop-portal-gtk ];
       config.common.default = [ "kde" ];
-    };
+    };  
     environment.systemPackages = with pkgs; [
-      unstable.firefox
       unstable.dorion
       unstable.tidal-hifi
-      kdePackages.kdeconnect-kde
-      xdg-desktop-portal
-      xdg-desktop-portal-wlr
-      #xdg-desktop-portal-gtk
-      xdg-desktop-portal-kde
       input-leap
       lan-mouse
       libreoffice
@@ -27,6 +21,9 @@
       inputs.tagstudio.packages.${pkgs.stdenv.hostPlatform.system}.tagstudio
       obs-studio
     ];
+
+    programs.firefox.enable = true;
+    
     networking.firewall = { allowedTCPPorts = [ 24800 4242 ]; }; # for lan-mouse
   };
 }

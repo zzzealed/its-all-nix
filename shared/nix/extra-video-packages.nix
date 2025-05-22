@@ -5,7 +5,6 @@
     environment.systemPackages = with pkgs; [
       ffmpeg
       yt-dlp
-      unstable.mpv
       libplacebo
       mediainfo
     ];
