@@ -7,7 +7,7 @@
       package = (
         pkgs.unstable.mpv-unwrapped.wrapper {
           scripts = with pkgs.mpvScripts; [
-             mpris
+             # None atm. See `shared/home-manager/mpv/config/scripts/`
           ];
  
           mpv = pkgs.unstable.mpv-unwrapped.override {
