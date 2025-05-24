@@ -1,6 +1,6 @@
 services:
     lms:
-        image: ghcr.io/lms-community/lyrionmusicserver:9.0.3
+        image: ghcr.io/lms-community/lyrionmusicserver:9.1.0
         volumes:
             - ./data:/config:rw
             - /vault/Audio/Music/:/music:ro
