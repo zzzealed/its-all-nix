@@ -1,7 +1,7 @@
 services:
   jdownloader2:
     image: ghcr.io/jlesage/jdownloader-2:v25.02.1
-#    restart: unless-stopped
+    restart: unless-stopped
     ports:
       - "50438:5800"
     volumes:

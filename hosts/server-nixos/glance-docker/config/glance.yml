@@ -17,6 +17,9 @@ pages:
               - title: Router
                 url: http://192.168.0.1:80
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/pfsense.svg
+              - title: JetKVM
+                url: http://192.168.0.104:80
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/jetkvm.svg
               - title: Vaultwarden
                 url: https://vault.l.zzzealed.com
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/vaultwarden.svg
