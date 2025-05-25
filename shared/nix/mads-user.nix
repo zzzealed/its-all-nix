@@ -7,7 +7,7 @@
       isNormalUser = true;
       hashedPassword = "$y$j9T$6vFvxN86DFTOIwcl.Zq6e0$gl59welPFvDnvVrAdaE4zbN8QO2Qir6rwVbrmdfPM97";
       home = "/home/mads";
-      extraGroups = [ "wheel" "docker" "adbusers" ];
+      extraGroups = [ "wheel" "docker" "adbusers" "gamemode" ];
       linger = true;
       packages = with pkgs; [
         fastfetch
@@ -20,6 +20,10 @@
         tealdeer
         navi
         mozillavpn
+        eza
+        dust
+        ripgrep
+        presenterm
       ];
     };
     # HM user specific stuff

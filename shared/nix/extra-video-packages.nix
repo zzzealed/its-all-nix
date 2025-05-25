@@ -5,8 +5,9 @@
     environment.systemPackages = with pkgs; [
       ffmpeg
       yt-dlp
-      libplacebo
+      unstable.libplacebo
       mediainfo
+      unstable.mesa
     ];
   };
 }

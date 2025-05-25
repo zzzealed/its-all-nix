@@ -2,9 +2,7 @@
 
 {
   config = {
-    home.packages = [ pkgs.unstable.helix ];
-
-    # Link the shared MPV configuration
+    home.packages = [ pkgs.unstable.helix pkgs.unstable.helix-gpt ];
     home.file.".config/helix" = {
       source = ./config;
       recursive = true;
