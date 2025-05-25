@@ -13,7 +13,6 @@ function y() {
 }
 
 # Zellij stuff
-alias zellij="zellij --layout compact"
 #eval "$(zellij setup --generate-auto-start bash"
 
 # Other

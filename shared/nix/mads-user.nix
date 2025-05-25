@@ -11,7 +11,6 @@
       linger = true;
       packages = with pkgs; [
         fastfetch
-        unstable.zellij     
         unstable.uutils-coreutils
         tokei
         bat
@@ -37,6 +36,7 @@
         ../home-manager/firefox
         ../home-manager/bash
         ../home-manager/ghostty
+        ../home-manager/zellij
       ];
     };
   };
