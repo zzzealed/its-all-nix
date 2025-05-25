@@ -21,6 +21,8 @@
     ./makemkv-docker
     ./jackett-docker
     ./openwebui-docker
+    ./lyrion_music_server-docker
+    ./rust-gameserver
   ];
 
    config = {
@@ -32,6 +34,8 @@
     boot.supportedFilesystems = [ "zfs" ];
     boot.zfs.forceImportRoot = false;
     networking.hostId = "3f39026e";
+
+    networking.interfaces.enp3s0.wakeOnLan.enable = true;
 
     boot.zfs.extraPools = [ "vault" ]; # Import encrypted pool with `sudo zpool import -l <pool_name>`
 
@@ -46,6 +50,8 @@
       libdvdnav
       libdvdcss
       libdvdread
+      steamcmd
+      steam-run
     ];
 
     boot.binfmt.emulatedSystems = [

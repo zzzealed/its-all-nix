@@ -5,3 +5,4 @@ services:
       - "50112:8080"
     volumes:
       - ./data/open-webui:/app/backend/data
+    restart: unless-stopped
