@@ -13,7 +13,7 @@ function y() {
 }
 
 # Zellij stuff
-#eval "$(zellij setup --generate-auto-start bash"
+eval "$(zellij setup --generate-auto-start bash)"
 
 # Other
 alias ls="eza"
