@@ -1,6 +1,6 @@
 services:
   jackett:
-    image: ghcr.io/linuxserver/jackett:0.22.1971
+    image: ghcr.io/linuxserver/jackett:0.22.1974
     container_name: jackett
     environment:
       - PUID=1000
