@@ -23,6 +23,7 @@
     ./openwebui-docker
     ./lyrion_music_server-docker
     ./rust-gameserver
+    ./searx
   ];
 
    config = {
