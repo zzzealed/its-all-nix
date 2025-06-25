@@ -1,6 +1,6 @@
 services:
   jdownloader2:
-    image: ghcr.io/jlesage/jdownloader-2:v25.06.1
+    image: ghcr.io/jlesage/jdownloader-2:v25.06.2
     restart: unless-stopped
     ports:
       - "50438:5800"
