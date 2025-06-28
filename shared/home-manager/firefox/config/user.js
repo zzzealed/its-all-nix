@@ -29,7 +29,7 @@ user_pref("sidebar.visibility", "always-show"); // Always show sidebar
 user_pref("layout.word_select.eat_space_to_next_word", false); // Don't select the space next to a word when selecting a word
 
 
-/* 2. Fastfox version: 133 */
+/* 2. Fastfox version: 137 */
 /****************************************************************************
  * SECTION: GENERAL                                                        *
  ****************************************************************************/
@@ -55,7 +55,7 @@ user_pref("gfx.webrender.dcomp-video-sw-overlay-win", true); // DEFAULT
 /****************************************************************************
  * SECTION: DISK CACHE                                                     *
  ****************************************************************************/
-user_pref("browser.cache.disk.enable", true);
+user_pref("browser.cache.disk.enable", false);
 user_pref("browser.cache.disk.smart_size.enabled", false); // force a fixed max cache size on disk
 user_pref("browser.cache.disk.capacity", 512000); // default=256000; size of disk cache; 1024000=1GB, 2048000=2GB
 user_pref("browser.cache.disk.max_entry_size", 51200); // DEFAULT (50 MB); maximum size of an object in disk cache
@@ -74,8 +74,8 @@ user_pref("browser.cache.jsbc_compression_level", 3);
 /****************************************************************************
  * SECTION: MEMORY CACHE                                                   *
  ****************************************************************************/
-user_pref("browser.cache.memory.capacity", -1); // DEFAULT; 256000=256 MB; 512000=500 MB; 1048576=1GB, 2097152=2GB
-user_pref("browser.cache.memory.max_entry_size", 10240); // (10 MB); default=5120 (5 MB)
+user_pref("browser.cache.memory.capacity", 131072); // DEFAULT; 256000=256 MB; 512000=500 MB; 1048576=1GB, 2097152=2GB
+user_pref("browser.cache.memory.max_entry_size", 20480); // (10 MB); default=5120 (5 MB)
 user_pref("browser.sessionhistory.max_total_viewers", 4);
 
 /****************************************************************************
@@ -99,8 +99,8 @@ user_pref("image.mem.shared.unmap.min_expiration_ms", 120000); // default=60000;
 /****************************************************************************
  * SECTION: NETWORK                                                         *
  ****************************************************************************/
-user_pref("network.buffer.cache.size", 262144); // 256 kb; default=32768 (32 kb)
-user_pref("network.buffer.cache.count", 128); // default=24
+user_pref("network.buffer.cache.size", 65535); // default=32768 (32 kb); 262144 too large
+user_pref("network.buffer.cache.count", 48); // default=24
 user_pref("network.http.max-connections", 1800); // default=900
 user_pref("network.http.max-persistent-connections-per-server", 10); // default=6; download connections; anything above 10 is excessive
   user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5); // default=3
@@ -126,7 +126,7 @@ user_pref("network.predictor.enabled", false);
 
 
 
-/* 3. Arkenfox version: 133 */
+/* 3. Arkenfox version: 135 */
 /*** [SECTION 0100]: STARTUP ***/
 user_pref("browser.startup.page", 1);
 user_pref("browser.startup.homepage", "https://glance.l.zzzealed.com");
@@ -145,20 +145,6 @@ user_pref("extensions.getAddons.showPane", false); // [HIDDEN PREF]
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.shopping.experience2023.enabled", false); // [DEFAULT: false]
-user_pref("datareporting.policy.dataSubmissionEnabled", false);
-user_pref("datareporting.healthreport.uploadEnabled", false);
-user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.enabled", false); // see [NOTE]
-user_pref("toolkit.telemetry.server", "data:,");
-user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("toolkit.telemetry.newProfilePing.enabled", false); // [FF55+]
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); // [FF55+]
-user_pref("toolkit.telemetry.updatePing.enabled", false); // [FF56+]
-user_pref("toolkit.telemetry.bhrPing.enabled", false); // [FF57+] Background Hang Reporter
-user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // [FF57+]
-user_pref("toolkit.telemetry.coverage.opt-out", true); // [HIDDEN PREF]
-user_pref("toolkit.coverage.opt-out", true); // [FF64+] [HIDDEN PREF]
-user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("app.shield.optoutstudies.enabled", false);
@@ -376,6 +362,27 @@ user_pref("extensions.quarantinedDomains.enabled", true); // [DEFAULT: true]
 /*** [SECTION 7000]: DON'T BOTHER ***/
 
 /*** [SECTION 8000]: DON'T BOTHER: FINGERPRINTING ***/
+
+/*** [SECTION 8500]: TELEMETRY ***/
+user_pref("_user.js.parrot", "8500 syntax error: the parrot's off the twig!");
+
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+
+user_pref("datareporting.healthreport.uploadEnabled", false);
+
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.enabled", false); // see [NOTE]
+user_pref("toolkit.telemetry.server", "data:,");
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("toolkit.telemetry.newProfilePing.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false); // [FF55+]
+user_pref("toolkit.telemetry.updatePing.enabled", false); // [FF56+]
+user_pref("toolkit.telemetry.bhrPing.enabled", false); // [FF57+] Background Hang Reporter
+user_pref("toolkit.telemetry.firstShutdownPing.enabled", false); // [FF57+]
+
+user_pref("toolkit.telemetry.coverage.opt-out", true); // [HIDDEN PREF]
+user_pref("toolkit.coverage.opt-out", true); // [FF64+] [HIDDEN PREF]
+user_pref("toolkit.coverage.endpoint.base", "");
 
 /*** [SECTION 9000]: NON-PROJECT RELATED ***/
 user_pref("browser.startup.homepage_override.mstone", "ignore"); // [HIDDEN PREF]
