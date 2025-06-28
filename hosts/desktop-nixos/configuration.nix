@@ -22,6 +22,10 @@
       gamescope
       rclone
       krita
+      unstable.legcord
+      unstable.heroic
+      rpcs3
+      unstable.ryubing
     ];
 
   programs.adb.enable = true;
@@ -29,6 +33,8 @@
   programs.kdeconnect.enable = true;
 
   programs.firefox.nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+
+  hardware.wooting.enable = true;
 
   home-manager.users.mads = {
     xdg.enable = true;

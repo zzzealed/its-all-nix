@@ -51,3 +51,10 @@ $ option:
 nix-shell -p <package>
 ```
 $ package:
+
+% nix, nix-shell, flake
+# Check if you are in a Nix shell or Nix flake development env
+```sh
+echo <option>
+```
+$ option: $NIX_SHELL $NIX_DEV

@@ -12,14 +12,12 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Zellij stuff
-eval "$(zellij setup --generate-auto-start bash)"
-
-# Other
-alias ls="eza"
-alias cat="bat" # uutils/coreutils still doesn't have syntax highlighting for cat
+# Aliases
+alias ls="ls --color=always --indicator-style=slash"
+alias rm="rm --verbose --interactive=once"
+# I use uutils-coreutils for cp and mv because of their `--progress` option.
+alias cp="uutils-cp --verbose --interactive --progress"
+alias mv="uutils-mv --verbose --interactive --progress"
+alias cat="bat" # Syntax highlighting for output
 alias grep="rg"
 alias du="dust"
-alias cp="uutils-cp --interactive --progress"
-alias mv="uutils-mv --interactive --progress"
-alias rm="uutils-rm --interactive=always"

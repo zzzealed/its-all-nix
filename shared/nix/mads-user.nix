@@ -8,16 +8,15 @@
       hashedPassword = "$y$j9T$6vFvxN86DFTOIwcl.Zq6e0$gl59welPFvDnvVrAdaE4zbN8QO2Qir6rwVbrmdfPM97";
       home = "/home/mads";
       extraGroups = [ "wheel" "docker" "adbusers" "gamemode" ];
-      linger = true;
+      linger = true; # So that processes keep running after ssh disconnect
       packages = with pkgs; [
         fastfetch
         unstable.uutils-coreutils
         tokei
         bat
-        fzf
+        fd
         skim
         tealdeer
-        navi
         mozillavpn
         eza
         dust
@@ -37,6 +36,7 @@
         ../home-manager/bash
         ../home-manager/ghostty
         ../home-manager/zellij
+        ../home-manager/navi
       ];
     };
   };

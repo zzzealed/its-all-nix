@@ -12,7 +12,6 @@
       config.common.default = [ "kde" ];
     };  
     environment.systemPackages = with pkgs; [
-      unstable.dorion
       unstable.tidal-hifi
       lan-mouse
       libreoffice
