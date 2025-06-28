@@ -1,3 +1,5 @@
+initial-command = zellij
+
 font-size = 15
 font-family = CodeNewRoman Nerd Font
 font-feature = -calt
