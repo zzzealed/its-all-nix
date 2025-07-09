@@ -1,3 +1,3 @@
 {
-networking.firewall = { allowedTCPPorts = [ 51820 444 53 50509 5335 ]; allowedUDPPorts = [ 53 ]; };
+networking.firewall = { allowedTCPPorts = [ 444 53 50509 50254 5335 ]; allowedUDPPorts = [ 53 51820 ]; };
 }
