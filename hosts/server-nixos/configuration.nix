@@ -6,7 +6,7 @@
     ./docker
     ./smb-shares
     ./ollama
-    ./wgquick
+    #./wgquick
     ./scrutiny
     ./gpt4free-docker
     ./glance-docker
