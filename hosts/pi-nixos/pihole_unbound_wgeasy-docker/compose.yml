@@ -2,7 +2,7 @@ services:
   wgeasy:
     container_name: wgeasy
     hostname: wgeasy
-    image: ghcr.io/wg-easy/wg-easy:15
+    image: ghcr.io/wg-easy/wg-easy:14
     restart: unless-stopped
     environment:
       - WG_HOST=${DDNS}
