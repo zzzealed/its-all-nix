@@ -30,7 +30,7 @@ services:
     container_name: pihole-unbound
     hostname: pihole
     domainname: pihole.local
-    image: ghcr.io/mpgirro/docker-pihole-unbound:2025.06.2
+    image: ghcr.io/mpgirro/docker-pihole-unbound:2025.07.1
     env_file: .env
     restart: unless-stopped
     environment:
