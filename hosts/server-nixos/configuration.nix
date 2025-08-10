@@ -1,4 +1,4 @@
-{ pkgs, config, flakeInputs, ... }:
+{ pkgs, config, ... }:
 
 {
   imports = [
@@ -10,20 +10,18 @@
     ./scrutiny
     ./gpt4free-docker
     ./glance-docker
-    ./homeassistant-docker
-    ./qbittorrentvpn-docker
-    ./qbittorrent-docker
+    #./homeassistant-docker
+    #./qbittorrentvpn-docker
+    #./qbittorrent-docker
     ./traefik-docker
     ./jdownloader2-docker
-    ./searxng-docker
     ./vaultwarden-docker
     ./calibrewebautomated-docker
-    ./makemkv-docker
-    ./jackett-docker
     ./openwebui-docker
-    ./lyrion_music_server-docker
     ./rust-gameserver
     ./searx
+    ./windows-docker
+    ./home-assistant
   ];
 
    config = {
@@ -38,7 +36,7 @@
 
     networking.interfaces.enp3s0.wakeOnLan.enable = true;
 
-    boot.zfs.extraPools = [ "vault" ]; # Import encrypted pool with `sudo zpool import -l <pool_name>`
+    boot.zfs.extraPools = [ "vault" "vault2" ]; # Import encrypted pool with `sudo zpool import -l <pool_name>`
 
     environment.systemPackages = with pkgs; [
       nvidia-container-toolkit

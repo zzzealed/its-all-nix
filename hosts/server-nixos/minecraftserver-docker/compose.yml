@@ -7,10 +7,21 @@ services:
       - "25565:25565"
     environment:
       EULA: "TRUE"
-      VERSION: "1.21.4"
-      MEMORY: "8G"
+      VERSION: "1.21.7"
+      MEMORY: "16G"
+      VIEW_DISTANCE: "32"
+      DIFFICULTY: "normal"
+      MOTD: "Mads' Single Player (glitchless)"
+      ICON: "server-icon.png"
+      OVERRIDE_ICON: true
+      FORCE_GAMEMODE: true
+      MAX_PLAYERS: "1"
+      SNOOPER_ENABLED: false
+      LEVEL: "world"
+      ONLINE_MODE: true
+      SERVER_NAME: "Mads' Single Player (glitchless)" 
       TYPE: "FABRIC"
-      MODRINTH_PROJECTS: "fabric-api,cloth-config,ferrite-core,lithium,fabric-language-kotlin,yacl,modernfix,collective,krypton,debugify,clumps,owo-lib,better-stats,skinshuffle,improved-signs"
+      MODRINTH_PROJECTS: "fabric-api,ferrite-core,lithium,simple-voice-chat,better-stats,skinshuffle,improved-signs,tcdcommons,c2me-fabric,krypton"
       MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
     volumes:
