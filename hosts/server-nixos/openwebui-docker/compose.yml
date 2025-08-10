@@ -1,6 +1,6 @@
 services:
   openwebui:
-    image: ghcr.io/open-webui/open-webui:v0.6.15
+    image: ghcr.io/open-webui/open-webui:v0.6.20
     ports:
       - "50112:8080"
     volumes:
