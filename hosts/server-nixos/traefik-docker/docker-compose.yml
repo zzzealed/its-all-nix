@@ -14,7 +14,8 @@ services:
       - ./data/certs/:/var/traefik/certs/:rw
       - ./config/conf.d/:/etc/traefik/conf.d/:ro
     environment:
-      - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}  # <-- Change this to your Cloudflare API Token
+      - PORKBUN_SECRET_API_KEY=${PORKBUN_SECRET_API_KEY}
+      - PORKBUN_API_KEY=${PORKBUN_API_KEY}
     networks:
       - frontend
     restart: unless-stopped

@@ -10,11 +10,11 @@ http:
         - web
         - websecure
       tls:
-        certResolver: cloudflare
+        certResolver: CertificateResolver0
 
   # -- Change Service Configuration here...
   services:
     pihole:  # <-- Change Service Name here...
       loadBalancer:
         servers:
-          - url: "http://192.168.0.151:50509"  # <-- Change Target Service URL here...
+          - url: "http://pi.l.zzzealed.com:50509"  # <-- Change Target Service URL here...

@@ -6,11 +6,10 @@
     ./docker
     ./smb-shares
     ./ollama
-    #./wgquick
+    ./wgquick
     ./scrutiny
     ./gpt4free-docker
     ./glance-docker
-    #./homeassistant-docker
     #./qbittorrentvpn-docker
     #./qbittorrent-docker
     ./traefik-docker
@@ -22,6 +21,7 @@
     ./searx
     ./windows-docker
     ./home-assistant
+    ./changedetection-docker
   ];
 
    config = {

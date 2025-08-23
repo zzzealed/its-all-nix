@@ -1,0 +1,136 @@
+- name: Page 1
+  columns:
+    - size: small
+      widgets:
+        - type: calendar
+          first-day-of-week: monday
+        - type: bookmarks
+          groups:
+            - links:
+              - title: YouTube
+                url: https://youtube.com
+              - title: GitHub
+                url: https://github.com/notifications
+              - title: Reddit
+                url: https://www.reddit.com
+              - title: Steam
+                url: https://store.steampowered.com/login
+              - title: Proton mail
+                url: https://mail.proton.me
+              - title: IsThereAnyDeal
+                url: https://isthereanydeal.com/deals
+              - title: Excalidraw
+                url: https://excalidraw.com
+              - title: HBD dashboard
+                url: https://28.ein.itsby.design
+            - links:
+              - title: Liquipedia
+                url: https://liquipedia.net
+              - title: HLTV
+                url: https://hltv.org
+              - title: Apex Comp calendar
+                url: https://calendar.google.com/calendar/embed?src=9ad286735043bbfc1494408580cbe6246b9d92988537e4549053f9e6866d63b3@group.calendar.google.com&ctz=Europe/Copenhagen
+              - title: CoC Esports news
+                url: https://esports.clashofclans.com/news
+            - links:
+              - title: NixOS Search
+                url: https://search.nixos.org
+              - title: NixOS Wiki
+                url: https://wiki.nixos.org
+              - title: MPV docs
+                url: https://mpv.io/manual/master
+              - title: Helix docs
+                url: https://docs.helix-editor.com
+              - title: Ghostty docs
+                url: https://ghostty.org/docs
+              - title: Zellij docs
+                url: https://zellij.dev/documentation
+              - title: GitHub Markdown docs
+                url: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#headings
+            - links:
+              - title: r/Piracy megathread
+                url: https://www.reddit.com/r/Piracy/wiki/megathread
+              - title: r/Piracy Lemmy instance
+                url: https://lemmy.dbzer0.com/c/piracy
+              - title: FMHY posts
+                url: https://fmhy.net/posts
+            - links:
+              - title: RustHelp
+                url: https://rusthelp.com/en
+              - title: Rust Wiki
+                url: https://wiki.rustclash.com
+              - title: Rust Twitch Drops
+                url: https://twitch.facepunch.com/connect#account
+
+    - size: full
+      widgets:
+        - type: clock
+          hour-format: 24h
+          timezones:
+            - timezone: America/New_York
+            - timezone: America/Los_Angeles
+        - type: rss
+          style: detailed-list
+          collapse-after: 10
+          feeds:
+            - url: https://finance.yahoo.com/news/rssindex
+              title: Yahoo Finance
+            - url: https://www.dr.dk/nyheder/service/feeds/indland
+              title: DR Indland
+            - url: https://www.dr.dk/nyheder/service/feeds/udland
+              title: DR Udland
+            - url: https://www.dr.dk/nyheder/service/feeds/penge
+              title: DR Penge
+            - url: https://www.dr.dk/nyheder/service/feeds/politik
+              title: DR Politik
+            - url: https://www.dr.dk/nyheder/service/feeds/viden
+              title: DR Viden
+            - url: https://www.dr.dk/nyheder/service/feeds/kultur
+              title: DR Kultur
+            - url: https://www.dr.dk/nyheder/service/feeds/regionale/oestjylland
+              title: DR Østjylland
+
+    - size: small
+      widgets:
+        - type: weather
+          title-url: https://www.yr.no/en/forecast/daily-table/2-2610309/Denmark/Central%20Jutland/Aarhus%20Kommune/Viby-Terp
+          units: metric
+          hour-format: 24h
+          location: Viby J, Denmark
+        - type: group
+          define: &shared-properties
+            chart-link-template: https://finance.yahoo.com
+            symbol-link-template: https://finance.yahoo.com/quote/{SYMBOL}
+          widgets:
+          - type: markets
+            title: Indices
+            <<: *shared-properties
+            markets:
+              - symbol: ^GSPC
+                name: S&P 500
+              - symbol: ^DJI
+                name: Dow Jones Industrial Average
+              - symbol: ^IXIC
+                name: NASDAQ Composite
+          - type: markets
+            title: Stocks
+            <<: *shared-properties
+            markets:
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: MSFT
+                name: Microsoft
+              - symbol: AAPL
+                name: Apple
+              - symbol: GOOG
+                name: Alphabet
+              - symbol: AMZN
+                name: Amazon
+              - symbol: META
+                name: Meta Platforms
+              - symbol: TSM
+                name: TSMC
+              - symbol: TSLA
+                name: TESLA
+              - symbol: BRK-B
+                name: Berkshire Hathaway        

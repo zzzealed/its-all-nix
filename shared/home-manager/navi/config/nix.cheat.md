@@ -9,7 +9,7 @@ $ host: nix flake show 2>&1 | grep -oP '(├───|└───)\K[^:]+'
 % nixos-rebuild, flake, remote
 # Rebuild for remote host via. SSH
 ```sh
-sudo nixos-rebuild --target-host <remote_host> --use-remote <option> --flake .#<host>
+sudo nixos-rebuild --target-host <remote_host> --use-remote-sudo <option> --flake .#<host>
 ```
 $ remote_host:
 $ option: echo -e "switch\nboot\ntest\nbuild\ndry-activate\nbuild-vm"

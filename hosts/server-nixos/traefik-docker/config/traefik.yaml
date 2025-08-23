@@ -6,7 +6,7 @@ global:
 # --> (Optional) Change log level and format here ...
 #     - level: [TRACE, DEBUG, INFO, WARN, ERROR, FATAL]
 #log:
-#  level: DEBUG
+  #level: DEBUG
 # <--
 
 # --> (Optional) Enable accesslog here ...
@@ -35,13 +35,13 @@ entryPoints:
 
 # -- Configure your CertificateResolver here...
 certificatesResolvers:
-  cloudflare:
+  CertificateResolver0:
     acme:
       email: zzzealed@proton.me  # <-- Change this to your email
-      storage: /var/traefik/certs/cloudflare-acme.json
+      storage: /var/traefik/certs/acme.json
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
       dnsChallenge:
-        provider: cloudflare  # <-- (Optional) Change this to your DNS provider
+        provider: porkbun  # <-- (Optional) Change this to your DNS provider
         resolvers:
           - "1.1.1.1:53"
           - "8.8.8.8:53"

@@ -1,0 +1,118 @@
+- name: Page 2
+  columns:
+    - size: small
+      widgets:
+        - type: server-stats
+          servers:
+            - type: local
+              name: server-nixos
+              hide-mountpoints-by-default: true
+              mountpoints:
+                "/":
+                  hide: false
+                "/vault":
+                  hide: false
+                "/vault2":
+                  hide: false
+        - type: monitor
+          cache: 5m
+          sites:
+            - title: Router
+              url: http://192.168.0.1
+              icon: sh:pfsense
+            - title: JetKVM
+              url: http://192.168.0.104
+              icon: sh:jetkvm
+            - title: Vaultwarden
+              url: https://vault.l.zzzealed.com
+              icon: sh:vaultwarden
+            - title: SearXNG
+              url: https://searx.l.zzzealed.com
+              icon: sh:searxng
+            - title: OpenWebUI
+              url: https://chat.l.zzzealed.com
+              icon: sh:open-webui
+            - title: GPT4Free
+              url: https://g4f.l.zzzealed.com
+              icon: sh:chatgpt
+            - title: HBD qBittorrent
+              url: https://28.ein.itsby.design/qbittorrent
+              icon: sh:qbittorrent
+              alt-status-codes:
+                - 401
+            - title: PiHole
+              url: https://pihole.l.zzzealed.com/admin
+              icon: sh:pi-hole
+            - title: Windows container
+              url: https://win.l.zzzealed.com
+              icon: sh:microsoft-windows
+            - title: Home Assistant
+              url: https://ha.l.zzzealed.com
+              icon: sh:home-assistant
+            - title: JDownloader2
+              url: https://jd2.l.zzzealed.com
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jdownloader.png
+            - title: CalibreWeb Automated
+              url: https://calibre.l.zzzealed.com
+              icon: sh:calibre-web
+            - title: WGEasy
+              url: https://wg.l.zzzealed.com
+              icon: sh:wireguard
+            - title: Scrutiny
+              url: https://scrutiny.l.zzzealed.com
+              icon: sh:scrutiny 
+
+    - size: full
+      widgets:
+        - type: to-do
+        - type: rss
+          style: detailed-list
+          collapse-after: 10
+          feeds:
+            - url: https://selfh.st/rss
+              title: Selfh.st
+            - url: https://noted.lol/tag/news/rss
+              title: NOTED
+            - url: https://torrentfreak.com/feed
+              title: TorrentFreak
+
+    - size: small
+      widgets:
+        - type: dns-stats
+          service: pihole-v6
+          url: https://pihole.l.zzzealed.com
+          password: ${PIHOLE_PASS}
+          hour-format: 24h
+        - type: repository
+          repository: zzzealed/its-all-nix
+          pull-requests-limit: 5
+          issues-limit: 5
+          commits-limit: 5
+        - type: custom-api
+          title: Mullvad Status
+          cache: 1m
+          url: https://am.i.mullvad.net/json
+          template: |
+            <div>
+              <div>
+                <div>
+                  {{ $connected := (.JSON.Bool "mullvad_exit_ip") }}
+                  {{ $ip := (.JSON.String "ip") }}
+                  {{ $city := (.JSON.String "city") }}
+                  {{ $country := (.JSON.String "country") }}
+                  {{ if $connected }}
+                    <div class="color-highlight size-h3">
+                      Your VPN is connected!
+                      <span class="color-positive">●</span> 
+                    </div>
+                  {{ else }}
+                    <div class="color-highlight size-h3">
+                      Your VPN is not connected!
+                      <span class="color-negative">●</span> 
+                    </div>
+                  {{ end }}
+                </div>
+                <div class="size-h5">{{ $ip }} - {{ $city }}, {{ $country }}</div>
+              </div>
+            </div>
+

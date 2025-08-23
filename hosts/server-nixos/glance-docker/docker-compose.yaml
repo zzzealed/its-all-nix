@@ -1,0 +1,16 @@
+services:
+  glance:
+    image: glanceapp/glance:v0.8.4
+    env_file: .env
+    volumes:
+      - ./config:/app/config
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /vault:/vault:ro
+      - /vault2:/vault2:ro
+    ports:
+      - 50596:8080
+    restart: unless-stopped
+  glances-ical-api:
+    image: ghcr.io/awildleon/glance-ical-events:main
+    restart: always

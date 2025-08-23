@@ -10,11 +10,11 @@ http:
         - web
         - websecure
       tls:
-        certResolver: cloudflare
+        certResolver: CertificateResolver0
 
   # -- Change Service Configuration here...
   services:
     openwebui:  # <-- Change Service Name here...
       loadBalancer:
         servers:
-          - url: "http://192.168.0.118:50112"  # <-- Change Target Service URL here...
+          - url: "http://server.l.zzzealed.com:50112"  # <-- Change Target Service URL here...

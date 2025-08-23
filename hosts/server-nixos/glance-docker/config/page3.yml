@@ -1,0 +1,102 @@
+- name: Page 3
+  columns:
+    - size: small
+      widgets:
+        - type: twitch-channels
+          collapse-after: 10
+          channels:
+            - RetalsRL
+            - RocketLeague
+            - RLEsports
+            - ImperialHal__
+            - Feer
+            - JohnnyBoi_i
+            - ApparentlyJack_RL
+            - CJCJ
+            - Feinberg
+            - NiceWigg
+            - GarrettG
+            - Vatira_
+            - atowwwww
+            - dralii
+            - Zer0
+            - Priv4cy
+            - Genburten
+            - Blooprint
+            - Oilrats
+            - Ferra
+            - Tr3bla_
+            - NakeyJakey
+            - Xynew
+            - Breezi_EU
+            - rl_rw9
+            - NiKo
+            - Kaydop
+
+    - size: full
+      widgets:
+        - type: videos
+          collapse-after: 10
+          include-shorts: false
+          channels:
+            - UCsvn_Po0SmunchJYOWpOxMg
+            - UCRLM6B6rGXDSJawUH_mHHPw
+            - UCRi4YlWuLFCucOx_rk-ddsg
+            - UCRbOPaGDB_xOQkVM8Rnn62Q
+            - UCFQMnBA3CS502aghlcr0_aw
+            - UCYGDiVemmhY_Q1M-hKp4fvw
+            - UCVWhVAZwCdQsPZL-mDLcxPQ
+            - UCZy7hPGKvkDxWmXvJoGPf3g
+            - UC7Ucs42FZy3uYzjrqzOIHsw
+            - UCGtVx6kynsJRHynh8tqFE9w
+            - UC3cpN6gcJQqcCM6mxRUo_dA
+            - UCRYOj4DmyxhBVrdvbsUwmAA
+            - UClt01z1wHHT7c5lKcU8pxRQ
+            - UCgNg3vwj3xt7QOrcIDaHdFg
+            - UCVo63lbKHjC04KqYhwSZ_Pg
+            - UCTSRIY3GLFYIpkR2QwyeklA
+            - UC9PIn6-XuRKZ5HmYeu46AIw
+            - UCDW4vtn9Tt39DeIO5aSpXsg
+            - UCW76vR0-kSH5JWXJs35RAiQ
+            - UCiflacceDTPX3_SJG3Uiqkg
+            - UCSdma21fnJzgmPodhC9SJ3g
+            - UC8cVno7WVooCpLvjJUhFtoA
+            - UC1DTYW241WD64ah5BFWn4JA
+            - UCm8EsftbfNzSiRHzc7I59KQ
+            - UC2C_jShtL725hvbm1arSV9w
+            - UCcWZY8dxd4HhlH5vY_Luzgw
+            - UCBa659QWEk1AI4Tg--mrJ2A
+            - UCZNhwA1B5YqiY1nLzmM0ZRg
+            - UCnuk6QPjyRA_SCE4I6RcPbA
+            - UChFur_NwVSbUozOcF_F2kMg
+            - UC2ksme4hP4Nx97ilFTQ0K0Q
+            - UC5UAwBUum7CPN5buc-_N1Fw
+            - UCtQ3NfmlxDDWyhfxxgOsJhA
+            - UCE_BYUUN0I04cAmk1c40sTg
+            - UCj-wTLj0p0YvTkS-9-ACm0A
+        - type: group
+          widgets:
+            - type: hacker-news
+              collapse-after: 10
+              limit: 20
+            - type: lobsters
+              sort-by: hot
+              collapse-after: 10
+              limit: 20
+            # - type: reddit
+
+    - size: small
+      widgets:
+        - type: custom-api
+          title: "iCal Events (Compact)"
+          cache: 1h
+          url: "http://glances-ical-api:8076/events?url="
+          template: |
+            <div>
+            {{ range .JSON.Array "events" }}
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div class="size-h3" style="text-align: left; width: 175px;">{{ .String "name" }}</div>
+                <div class="color-primary size-h3" style="text-align: right; width: 75px;" {{ .String "start" | parseTime "rfc3339" | toRelativeTime }}></div>
+              </div>
+            {{ end }}
+            </div>
