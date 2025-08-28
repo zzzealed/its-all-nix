@@ -8,5 +8,5 @@ services:
             - ./data/har_and_cookies:/app/har_and_cookies
             - ./data/generated_images:/app/generated_images
         restart: unless-stopped
-        image: hlohaus789/g4f:0.6.0.1
+        image: hlohaus789/g4f:0.6.1.6
 
