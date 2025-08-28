@@ -55,6 +55,9 @@
             - title: CalibreWeb Automated
               url: https://calibre.l.zzzealed.com
               icon: sh:calibre-web
+            - title: ChangeDetection
+              url: https://changedetection.l.zzzealed.com
+              icon: sh:changedetection
             - title: WGEasy
               url: https://wg.l.zzzealed.com
               icon: sh:wireguard
@@ -75,9 +78,14 @@
               title: NOTED
             - url: https://torrentfreak.com/feed
               title: TorrentFreak
+            - url: https://mullvad.net/en/blog/feed/atom
+              title: Mullvad
 
     - size: small
       widgets:
+        - type: change-detection
+          instance-url: https://changedetection.l.zzzealed.com
+          token: ${CHANGE_DETECTION_TOKEN}
         - type: dns-stats
           service: pihole-v6
           url: https://pihole.l.zzzealed.com
